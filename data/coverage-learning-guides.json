@@ -1,0 +1,559 @@
+{
+  "dataset_type": "coverage_learning_guides",
+  "version": "2026-10-30",
+  "status": "REVIEW_DRAFT",
+  "notice": "담보별 안내 상세 화면의 학습용 설명(상세 설명·이해를 위한 예시 그림)입니다. 화면 구성: 핵심 설명 → 상세 설명 → 이해를 위한 예시(그림, 해당하는 경우) → 하단 공통 안내 문구. 35개 주제 전체 등록(2026-10-30). 핵심 설명은 통합 초안의 확정 문구 또는 주제 전용 문구를 그대로 쓰며 이 파일에서 덮어쓰지 않습니다. 이해에 필수인 조건(면책·감액·보장 제외·지급 제한 등)은 상세 설명 안에 포함하고, 확인되지 않은 수치·조건은 넣지 않습니다. 그림 종류: timeline(기간) · breakdown(금액 막대) · flow(흐름) · compare(비교) · cards(항목 구분) · periods(기간 길이 비교). 그림 속 금액·막대 길이는 원리를 설명하는 가상 예시입니다. 모든 내용은 학습 설명 검토 초안이며 약관 검증·회사 승인과 별도로 관리합니다. 개발 미리보기에서만 표시합니다.",
+  "guides": [
+    {
+      "id": "guide-renewal",
+      "title": "갱신형 보험료",
+      "appliesToTopicIds": ["cov-01"],
+      "reviewStatus": "REVIEW_DRAFT",
+      "policyVerification": "NOT_VERIFIED",
+      "companyApproval": "NOT_CONFIRMED",
+      "detail": [
+        "갱신형 담보는 정해진 갱신주기에 따라 보험료가 다시 산정될 수 있습니다.",
+        "갱신 시 연령, 위험률 등 약관상 산정 요소에 따라 보험료가 달라질 수 있으며, 보험료가 항상 인상되는 것은 아닙니다."
+      ],
+      "visual": {
+        "type": "flow",
+        "title": "갱신형 담보의 보험료 산정 흐름",
+        "steps": [
+          { "label": "최초 가입", "note": "가입 시점 기준으로 보험료 산정" },
+          { "label": "갱신 시점", "note": "약관상 산정 요소로 보험료를 다시 산정" },
+          { "label": "다음 갱신 시점", "note": "같은 방식으로 다시 산정" }
+        ],
+        "caption": "갱신주기와 보험료 변동 폭은 상품·담보별로 다릅니다."
+      }
+    },
+    {
+      "id": "guide-rider-period",
+      "title": "특약별 보장기간",
+      "appliesToTopicIds": ["cov-02"],
+      "reviewStatus": "REVIEW_DRAFT",
+      "policyVerification": "NOT_VERIFIED",
+      "companyApproval": "NOT_CONFIRMED",
+      "detail": [
+        "하나의 보험계약에 여러 담보가 포함되어 있어도 각 담보의 보장기간과 보험료 납입기간은 다를 수 있습니다.",
+        "계약 전체의 만기만 보지 말고 개별 담보의 보장 종료 시점을 확인해야 합니다."
+      ],
+      "visual": {
+        "type": "periods",
+        "title": "담보마다 다른 보장 종료 시점",
+        "rows": [
+          { "label": "기본계약", "weight": 100, "tone": "primary" },
+          { "label": "선택특약 A", "weight": 70, "tone": "accent" },
+          { "label": "선택특약 B", "weight": 40, "tone": "accent" }
+        ],
+        "caption": "막대 길이는 이해를 위한 가상 예시이며 실제 보장기간을 의미하지 않습니다."
+      }
+    },
+    {
+      "id": "guide-cancer-waiting",
+      "title": "암담보 면책기간",
+      "appliesToTopicIds": ["cov-03"],
+      "reviewStatus": "REVIEW_DRAFT",
+      "policyVerification": "NOT_VERIFIED",
+      "companyApproval": "NOT_CONFIRMED",
+      "detail": [
+        "면책기간은 보험계약 후 일정 기간 동안 해당 담보의 보장이 개시되지 않는 기간입니다.",
+        "보장개시일과 면책 적용 여부는 실제 가입한 담보의 약관을 확인해야 합니다.",
+        "암 종류, 계약 형태, 부활 여부 등에 따라 적용조건이 달라질 수 있으므로 해당 상품 약관 확인이 필요합니다."
+      ],
+      "visual": {
+        "type": "timeline",
+        "title": "가입 후 보장이 시작되는 시점",
+        "steps": [
+          { "label": "가입일", "tone": "neutral" },
+          { "label": "면책기간", "tone": "waiting", "weight": 3 },
+          { "label": "91일째 보장개시", "tone": "start", "weight": 2 }
+        ],
+        "caption": "보장개시 시점은 핵심 설명의 '가입 후 91일째부터'를 나타낸 개념도입니다."
+      }
+    },
+    {
+      "id": "guide-dental-waiting",
+      "title": "치아보장 면책기간",
+      "appliesToTopicIds": ["cov-04"],
+      "reviewStatus": "REVIEW_DRAFT",
+      "policyVerification": "NOT_VERIFIED",
+      "companyApproval": "NOT_CONFIRMED",
+      "detail": [
+        "치아 관련 담보도 계약 후 일정 기간 동안 보장이 시작되지 않는 면책기간이 있을 수 있습니다.",
+        "면책기간의 길이와 적용되는 치료 종류는 담보별 약관에 따라 다르므로, 가입한 치아 담보의 보장개시일을 약관에서 확인해야 합니다."
+      ]
+    },
+    {
+      "id": "guide-birth-start",
+      "title": "출생 이후 보장 개시",
+      "appliesToTopicIds": ["cov-05"],
+      "reviewStatus": "REVIEW_DRAFT",
+      "policyVerification": "NOT_VERIFIED",
+      "companyApproval": "NOT_CONFIRMED",
+      "detail": [
+        "태아 상태에서 가입하는 경우, 출생 전후로 보장이 적용되는 방식이 담보마다 다를 수 있습니다.",
+        "어떤 담보가 출생 후 계약 체결 시점부터 소급 적용되는지, 출생 전에도 보장되는 담보가 있는지는 약관에서 담보별로 확인해야 합니다."
+      ],
+      "visual": {
+        "type": "flow",
+        "title": "태아 관련 담보의 보장 적용 흐름",
+        "steps": [
+          { "label": "계약 체결 (태아 상태)" },
+          { "label": "출생" },
+          { "label": "계약 체결 시점부터 소급 보장", "note": "해당 태아 관련 담보 기준" }
+        ],
+        "caption": "소급 적용 대상 담보는 약관에서 담보별로 확인합니다."
+      }
+    },
+    {
+      "id": "guide-cancer-reduction",
+      "title": "암담보 감액기간",
+      "appliesToTopicIds": ["cov-06"],
+      "reviewStatus": "REVIEW_DRAFT",
+      "policyVerification": "NOT_VERIFIED",
+      "companyApproval": "NOT_CONFIRMED",
+      "detail": [
+        "감액기간은 보험금 지급사유가 발생하더라도 약관에서 정한 비율로 보험금이 줄어드는 기간입니다.",
+        "면책기간과는 다른 개념이며, 적용 기간과 감액률은 담보별로 확인해야 합니다."
+      ],
+      "visual": {
+        "type": "timeline",
+        "title": "감액기간과 종료 후 비교",
+        "steps": [
+          { "label": "가입일", "tone": "neutral" },
+          { "label": "감액기간 (일부 지급)", "tone": "waiting", "weight": 2 },
+          { "label": "감액기간 종료 후 (약관상 보험금)", "tone": "start", "weight": 3 }
+        ],
+        "caption": "핵심 설명의 '가입 후 1년간 보험금의 50%'는 해당 암진단 담보 기준이며, 기간과 감액률은 담보별로 확인합니다."
+      }
+    },
+    {
+      "id": "guide-dental-reduction",
+      "title": "치아보장 감액기간",
+      "appliesToTopicIds": ["cov-07"],
+      "reviewStatus": "REVIEW_DRAFT",
+      "policyVerification": "NOT_VERIFIED",
+      "companyApproval": "NOT_CONFIRMED",
+      "detail": [
+        "감액기간은 보험금 지급사유가 생겨도 약관에서 정한 비율로 보험금이 줄어드는 기간입니다.",
+        "치아 담보의 감액 적용 여부, 기간과 비율은 치료 종류와 담보에 따라 다를 수 있으므로 약관에서 확인해야 합니다."
+      ]
+    },
+    {
+      "id": "guide-pet-proportional",
+      "title": "반려견 의료비 비례보상",
+      "appliesToTopicIds": ["cov-08"],
+      "reviewStatus": "REVIEW_DRAFT",
+      "policyVerification": "NOT_VERIFIED",
+      "companyApproval": "NOT_CONFIRMED",
+      "detail": [
+        "반려동물 의료비 담보는 동물병원에서 실제로 부담한 진료비를 기준으로 보상하는 담보입니다.",
+        "여러 계약에 가입했더라도 실제 진료비를 넘어 보험금이 지급되지 않으며, 각 계약의 보상한도와 자기부담금, 분담 방식에 따라 지급액이 나뉩니다.",
+        "보상 대상 진료 항목과 제외 항목은 반려동물 전용 약관에서 확인해야 합니다."
+      ],
+      "visual": {
+        "type": "breakdown",
+        "title": "반려동물 보험 2개에 가입한 경우",
+        "unit": "만 원",
+        "total": { "label": "실제 동물병원 진료비", "amount": 100 },
+        "parts": [
+          { "label": "A보험 지급액", "amount": 50, "tone": "accent" },
+          { "label": "B보험 지급액", "amount": 50, "tone": "primary" }
+        ],
+        "resultLabel": "합계 100만 원 (진료비를 넘지 않음)",
+        "caption": "이해를 위한 가상 예시이며 실제 분담비율이나 지급액을 의미하지 않습니다."
+      }
+    },
+    {
+      "id": "guide-proportional",
+      "title": "비례보상",
+      "appliesToTopicIds": ["cov-09", "cov-10", "cov-11", "cov-12", "cov-13", "cov-15"],
+      "reviewStatus": "REVIEW_DRAFT",
+      "policyVerification": "NOT_VERIFIED",
+      "companyApproval": "NOT_CONFIRMED",
+      "detail": [
+        "비례보상은 동일한 손해에 대해 여러 보험에 가입했더라도 실제 보상대상 손해액을 초과해 보험금을 지급하지 않는 원리입니다.",
+        "각 보험사의 실제 지급액은 보장범위, 한도, 자기부담금 및 약관상 분담 방식에 따라 달라질 수 있습니다.",
+        "모든 담보가 비례보상 대상은 아닙니다. 정액보상 담보와 구분해야 합니다."
+      ],
+      "visual": {
+        "type": "breakdown",
+        "title": "보험 2개에 가입한 경우",
+        "unit": "만 원",
+        "total": { "label": "실제 보상대상 손해액", "amount": 100 },
+        "parts": [
+          { "label": "A보험 지급액", "amount": 50, "tone": "accent" },
+          { "label": "B보험 지급액", "amount": 50, "tone": "primary" }
+        ],
+        "resultLabel": "합계 100만 원 (손해액을 넘지 않음)",
+        "caption": "가상 예시이며 실제 분담비율이나 지급액을 의미하지 않습니다."
+      }
+    },
+    {
+      "id": "guide-driver-costs",
+      "title": "운전자 비용담보",
+      "appliesToTopicIds": ["cov-14"],
+      "reviewStatus": "REVIEW_DRAFT",
+      "policyVerification": "NOT_VERIFIED",
+      "companyApproval": "NOT_CONFIRMED",
+      "detail": [
+        "벌금, 변호사선임비용, 자동차사고처리지원금 등은 각각 지급조건이 다른 별도의 담보입니다.",
+        "실제 발생 비용, 사고 유형, 법적 절차와 보장한도를 담보별로 확인해야 하며, 여러 계약에 가입해도 실제 발생한 비용을 넘어 지급되지 않습니다."
+      ],
+      "visual": {
+        "type": "cards",
+        "title": "비용 항목별로 따로 확인",
+        "cards": [
+          { "title": "벌금", "text": "형사처벌로 부과된 벌금" },
+          { "title": "변호사선임비용", "text": "법적 절차에서 변호사를 선임한 비용" },
+          { "title": "자동차사고처리지원금", "text": "피해자와의 형사합의 등에 필요한 비용" }
+        ],
+        "caption": "항목마다 지급조건과 보장한도가 다르므로 하나의 조건으로 합쳐 보지 않습니다."
+      }
+    },
+    {
+      "id": "guide-driver-exclusion",
+      "title": "운전자 면책사항",
+      "appliesToTopicIds": ["cov-16"],
+      "reviewStatus": "REVIEW_DRAFT",
+      "policyVerification": "NOT_VERIFIED",
+      "companyApproval": "NOT_CONFIRMED",
+      "detail": [
+        "운전자 비용담보는 사고가 났다고 항상 보장되는 것이 아니라, 약관에서 정한 면책사유에 해당하면 보험금이 지급되지 않습니다.",
+        "도주·음주·무면허 운전은 대표적인 면책사유이며, 그 밖의 면책사유와 적용되는 담보는 약관에서 확인해야 합니다."
+      ],
+      "visual": {
+        "type": "flow",
+        "title": "보장 여부 확인 흐름",
+        "steps": [
+          { "label": "사고 발생" },
+          { "label": "면책사유 해당 여부 확인", "note": "도주·음주·무면허 운전 등 해당 시 보장 제외" },
+          { "label": "지급조건·보장한도 확인" }
+        ]
+      }
+    },
+    {
+      "id": "guide-medical-exclusion",
+      "title": "실손의료비 보장 제외",
+      "appliesToTopicIds": ["cov-17"],
+      "reviewStatus": "REVIEW_DRAFT",
+      "policyVerification": "NOT_VERIFIED",
+      "companyApproval": "NOT_CONFIRMED",
+      "detail": [
+        "실손의료비는 치료 목적으로 실제 부담한 의료비를 기준으로 보상하지만, 약관에서 보장하지 않는 항목으로 정한 의료비는 지급되지 않습니다.",
+        "치료 목적이 아닌 의료비와 일부 한방·치과 비급여 의료비가 대표적이며, 세부 제외 항목은 가입 시기와 상품 유형별 약관에서 확인해야 합니다."
+      ],
+      "visual": {
+        "type": "compare",
+        "title": "보장 판단 대상과 보장 제외 구분",
+        "columns": [
+          { "title": "보장 판단 대상", "tone": "primary", "items": ["약관에서 정한 치료 목적의 의료비"] },
+          { "title": "보장 제외 확인", "tone": "accent", "items": ["치료 목적이 아닌 의료비", "해당 한방·치과 비급여 의료비"] }
+        ],
+        "caption": "세부 보장 제외 항목은 가입 시기와 상품 유형별 약관 기준입니다."
+      }
+    },
+    {
+      "id": "guide-surgery",
+      "title": "수술급여금 차등지급",
+      "appliesToTopicIds": ["cov-18"],
+      "reviewStatus": "REVIEW_DRAFT",
+      "policyVerification": "NOT_VERIFIED",
+      "companyApproval": "NOT_CONFIRMED",
+      "detail": [
+        "수술 관련 담보는 약관에서 정한 수술의 정의와 분류기준에 따라 지급 여부와 지급액이 결정됩니다.",
+        "동일한 치료 목적이라도 수술 방법이나 분류에 따라 보장조건이 다를 수 있습니다."
+      ],
+      "visual": {
+        "type": "flow",
+        "title": "수술급여금 지급기준 확인 흐름",
+        "steps": [
+          { "label": "수술 시행" },
+          { "label": "약관상 수술 정의에 해당하는지 확인" },
+          { "label": "수술 분류 확인" },
+          { "label": "분류별 지급기준 적용" }
+        ],
+        "caption": "수술 분류와 지급액은 담보별 약관 기준입니다."
+      }
+    },
+    {
+      "id": "guide-surrender",
+      "title": "해지환급금 미지급형",
+      "appliesToTopicIds": ["cov-19"],
+      "reviewStatus": "REVIEW_DRAFT",
+      "policyVerification": "NOT_VERIFIED",
+      "companyApproval": "NOT_CONFIRMED",
+      "detail": [
+        "해지환급금 미지급형은 계약을 중도 해지할 때 환급금 지급조건이 일반적인 유형과 다른 구조입니다.",
+        "환급금이 지급되지 않는 기간과 납입 완료 후 환급조건은 해당 상품 약관을 확인해야 합니다."
+      ],
+      "visual": {
+        "type": "timeline",
+        "title": "보험료 납입기간과 해지 시점",
+        "steps": [
+          { "label": "계약일", "tone": "neutral" },
+          { "label": "보험료 납입기간 (해지 시 환급금 미지급)", "tone": "waiting", "weight": 3 },
+          { "label": "납입 완료 후 (환급조건 약관 확인)", "tone": "start", "weight": 2 }
+        ],
+        "caption": "환급금이 지급되지 않는 기간과 납입 완료 후 환급조건은 상품 약관 기준입니다."
+      }
+    },
+    {
+      "id": "guide-dementia",
+      "title": "치매 보장대상 질병 및 조건",
+      "appliesToTopicIds": ["cov-20"],
+      "reviewStatus": "REVIEW_DRAFT",
+      "policyVerification": "NOT_VERIFIED",
+      "companyApproval": "NOT_CONFIRMED",
+      "detail": [
+        "치매 관련 담보는 약관에서 정한 치매의 정의와 진단기준을 충족해야 합니다.",
+        "치매의 중증도 평가와 지급조건은 가입한 담보에 따라 달라질 수 있습니다."
+      ],
+      "visual": {
+        "type": "flow",
+        "title": "치매진단비 지급 확인 흐름",
+        "steps": [
+          { "label": "치매 진단" },
+          { "label": "약관상 진단·평가기준 확인", "note": "치매척도검사 결과 등" },
+          { "label": "담보별 지급조건 확인" }
+        ]
+      }
+    },
+    {
+      "id": "guide-dementia-nature",
+      "title": "치매보장 상품 성격",
+      "appliesToTopicIds": ["cov-21"],
+      "reviewStatus": "REVIEW_DRAFT",
+      "policyVerification": "NOT_VERIFIED",
+      "companyApproval": "NOT_CONFIRMED",
+      "detail": [
+        "치매 관련 보장은 약관에서 정한 보험사고가 발생했을 때 보험금을 지급하는 보장성 보험입니다.",
+        "저축이나 연금처럼 납입한 보험료를 모아 돌려받는 목적의 상품과는 구조가 다르므로, 환급금 구조는 상품 약관에서 확인해야 합니다."
+      ]
+    },
+    {
+      "id": "guide-recurrence",
+      "title": "재진단암 지급조건",
+      "appliesToTopicIds": ["cov-22"],
+      "reviewStatus": "REVIEW_DRAFT",
+      "policyVerification": "NOT_VERIFIED",
+      "companyApproval": "NOT_CONFIRMED",
+      "detail": [
+        "재진단암은 최초 암 진단 이후 약관에서 정한 조건을 충족하는 암 진단을 의미합니다.",
+        "최초 진단일부터의 경과기간, 재진단암의 정의 및 지급 제외 조건 등을 확인해야 합니다."
+      ],
+      "visual": {
+        "type": "flow",
+        "title": "재진단암 지급 확인 흐름",
+        "steps": [
+          { "label": "최초 암 진단" },
+          { "label": "약관상 경과기간 확인" },
+          { "label": "재진단암 정의·지급 제외 조건 확인" }
+        ],
+        "caption": "핵심 설명의 '2년'은 해당 담보 기준이며, 경과기간은 담보별 약관에서 확인합니다."
+      }
+    },
+    {
+      "id": "guide-cancer-direct",
+      "title": "암 직접치료",
+      "appliesToTopicIds": ["cov-23"],
+      "reviewStatus": "REVIEW_DRAFT",
+      "policyVerification": "NOT_VERIFIED",
+      "companyApproval": "NOT_CONFIRMED",
+      "detail": [
+        "암 치료 관련 담보는 약관에서 정한 치료 목적과 범위에 따라 보장 여부가 결정됩니다.",
+        "암 자체를 치료하는 행위와 후유증·합병증 등을 치료하는 행위는 보장 판단이 달라질 수 있습니다."
+      ],
+      "visual": {
+        "type": "compare",
+        "title": "직접치료와 별도 확인이 필요한 치료",
+        "columns": [
+          { "title": "암의 직접적인 치료", "tone": "primary", "items": ["암 자체를 치료하는 행위", "약관상 치료 목적·범위로 판단"] },
+          { "title": "별도 확인 필요", "tone": "accent", "items": ["후유증 치료", "합병증 치료"] }
+        ],
+        "caption": "직접치료 해당 여부는 담보별 약관 기준으로 판단합니다."
+      }
+    },
+    {
+      "id": "guide-deductible",
+      "title": "자기부담금",
+      "appliesToTopicIds": ["cov-24", "cov-25", "cov-26"],
+      "reviewStatus": "REVIEW_DRAFT",
+      "policyVerification": "NOT_VERIFIED",
+      "companyApproval": "NOT_CONFIRMED",
+      "detail": [
+        "자기부담금은 보상대상 손해액 중 가입자가 직접 부담하도록 정한 금액 또는 비율입니다.",
+        "실제 지급액은 약관상 공제 방식, 지급한도 및 보장대상 여부에 따라 달라집니다.",
+        "실손의료비와 반려동물 의료비는 자기부담금 적용 방식이 다를 수 있습니다. 공통 수치를 적용하지 말고 상품·담보별 기준을 확인하세요."
+      ],
+      "visual": {
+        "type": "breakdown",
+        "title": "자기부담금을 뺀 지급 구조",
+        "unit": "만 원",
+        "total": { "label": "보상대상 의료비", "amount": 100 },
+        "parts": [
+          { "label": "자기부담금", "amount": 20, "tone": "accent" },
+          { "label": "지급 예시", "amount": 80, "tone": "primary" }
+        ],
+        "caption": "단순 차감 구조를 설명하는 가상 예시이며 특정 실손보험이나 펫보험의 실제 공제율을 의미하지 않습니다."
+      }
+    },
+    {
+      "id": "guide-pet-deductible",
+      "title": "반려동물 의료비 자기부담금",
+      "appliesToTopicIds": ["cov-35"],
+      "reviewStatus": "REVIEW_DRAFT",
+      "policyVerification": "NOT_VERIFIED",
+      "companyApproval": "NOT_CONFIRMED",
+      "detail": [
+        "반려동물 의료비 담보는 동물병원 진료비 중 약관에서 정한 자기부담금을 뺀 금액을 기준으로 보험금이 산정됩니다.",
+        "자기부담금이 금액인지 비율인지와 공제 기준은 반려동물 전용 약관에서 확인해야 하며, 사람의 실손의료비 자기부담 기준을 그대로 적용하지 않습니다."
+      ],
+      "visual": {
+        "type": "breakdown",
+        "title": "자기부담금을 뺀 지급 구조",
+        "unit": "만 원",
+        "total": { "label": "보상대상 의료비", "amount": 100 },
+        "parts": [
+          { "label": "자기부담금", "amount": 20, "tone": "accent" },
+          { "label": "지급 예시", "amount": 80, "tone": "primary" }
+        ],
+        "caption": "단순 차감 구조를 설명하는 가상 예시이며 특정 실손보험이나 펫보험의 실제 공제율을 의미하지 않습니다."
+      }
+    },
+    {
+      "id": "guide-child-discount",
+      "title": "자녀할인",
+      "appliesToTopicIds": ["cov-27"],
+      "reviewStatus": "REVIEW_DRAFT",
+      "policyVerification": "NOT_VERIFIED",
+      "companyApproval": "NOT_CONFIRMED",
+      "detail": [
+        "보험료 할인은 해당 상품에서 정한 할인 대상과 적용조건을 충족할 때 적용될 수 있습니다.",
+        "자녀할인은 자녀 연령 등 상품별 조건을 충족해야 하며, 할인율·적용기간·증빙 요건은 상품마다 다를 수 있습니다."
+      ],
+      "visual": {
+        "type": "flow",
+        "title": "할인 적용 확인 흐름",
+        "steps": [
+          { "label": "할인 대상 확인" },
+          { "label": "자녀 연령 등 조건 충족 여부 확인" },
+          { "label": "할인 적용" }
+        ],
+        "caption": "할인율·적용기간·증빙 요건은 상품별 기준입니다."
+      }
+    },
+    {
+      "id": "guide-multichild-discount",
+      "title": "다자녀 할인",
+      "appliesToTopicIds": ["cov-28"],
+      "reviewStatus": "REVIEW_DRAFT",
+      "policyVerification": "NOT_VERIFIED",
+      "companyApproval": "NOT_CONFIRMED",
+      "detail": [
+        "다자녀 할인은 자녀 수 등 해당 상품에서 정한 조건을 충족하는 경우 적용될 수 있습니다.",
+        "할인율, 적용기간, 증빙 서류는 상품별로 다를 수 있으므로 가입 상품의 기준을 확인해야 합니다."
+      ]
+    },
+    {
+      "id": "guide-disclosure",
+      "title": "고지의무",
+      "appliesToTopicIds": ["cov-29"],
+      "reviewStatus": "REVIEW_DRAFT",
+      "policyVerification": "NOT_VERIFIED",
+      "companyApproval": "NOT_CONFIRMED",
+      "detail": [
+        "고지의무는 보험 가입 전 청약서에서 묻는 건강상태·치료 이력 등을 사실대로 알려야 하는 의무입니다.",
+        "알려야 할 사항을 사실과 다르게 알리거나 빠뜨리면 약관에 따라 계약이 해지되거나 보험금 지급이 제한될 수 있습니다.",
+        "질문 항목과 대상 기간은 상품과 심사 방식에 따라 다릅니다."
+      ]
+    },
+    {
+      "id": "guide-simple-underwriting",
+      "title": "간편심사보험",
+      "appliesToTopicIds": ["cov-30"],
+      "reviewStatus": "REVIEW_DRAFT",
+      "policyVerification": "NOT_VERIFIED",
+      "companyApproval": "NOT_CONFIRMED",
+      "detail": [
+        "간편심사보험은 일반적인 보험보다 질문 항목이나 심사 절차를 간소화한 상품 유형입니다.",
+        "건강상태에 따라 일반심사보험에 가입할 수 있는지 비교하고, 보험료와 보장조건의 차이를 확인할 필요가 있습니다."
+      ],
+      "visual": {
+        "type": "compare",
+        "title": "일반심사와 간편심사 비교",
+        "columns": [
+          { "title": "일반심사", "tone": "primary", "items": ["일반적인 질문 항목과 심사 절차", "보험료가 상대적으로 낮을 수 있음"] },
+          { "title": "간편심사", "tone": "accent", "items": ["질문 항목·심사 절차 간소화", "보험료가 상대적으로 높을 수 있음"] }
+        ],
+        "caption": "실제 심사 질문과 보험료 차이는 상품별 기준입니다."
+      }
+    },
+    {
+      "id": "guide-proxy-claim",
+      "title": "지정대리청구인",
+      "appliesToTopicIds": ["cov-31"],
+      "reviewStatus": "REVIEW_DRAFT",
+      "policyVerification": "NOT_VERIFIED",
+      "companyApproval": "NOT_CONFIRMED",
+      "detail": [
+        "지정대리청구인 제도는 보험수익자가 보험금을 직접 청구하기 어려운 경우를 대비하는 제도입니다.",
+        "지정 가능한 대상과 실제 대리청구 요건은 해당 계약의 기준에 따라 확인해야 합니다."
+      ],
+      "visual": {
+        "type": "flow",
+        "title": "지정대리청구 흐름",
+        "steps": [
+          { "label": "지정대리청구인 사전 지정" },
+          { "label": "직접 청구가 어려운 상황 발생" },
+          { "label": "대리청구 요건 확인 후 청구" }
+        ]
+      }
+    },
+    {
+      "id": "guide-pet-liability",
+      "title": "반려견배상책임",
+      "appliesToTopicIds": ["cov-32"],
+      "reviewStatus": "REVIEW_DRAFT",
+      "policyVerification": "NOT_VERIFIED",
+      "companyApproval": "NOT_CONFIRMED",
+      "detail": [
+        "반려견배상책임은 반려견이 다른 사람의 신체나 재물에 손해를 입혀 법률상 배상책임을 지는 경우를 대상으로 합니다.",
+        "여러 계약에 가입해도 실제 손해액을 한도로 비례보상되며, 보장 여부는 사고 원인, 면책사유, 보상한도와 자기부담금에 따라 달라질 수 있습니다."
+      ],
+      "visual": {
+        "type": "flow",
+        "title": "배상책임 보상 확인 흐름",
+        "steps": [
+          { "label": "사고 발생", "note": "반려견이 타인에게 손해를 입힘" },
+          { "label": "법률상 배상책임 확인" },
+          { "label": "보상대상 손해 산정", "note": "보상한도·자기부담금 반영" }
+        ]
+      }
+    },
+    {
+      "id": "guide-prosthesis-limit",
+      "title": "보철치료 연간 횟수 제한",
+      "appliesToTopicIds": ["cov-33"],
+      "reviewStatus": "REVIEW_DRAFT",
+      "policyVerification": "NOT_VERIFIED",
+      "companyApproval": "NOT_CONFIRMED",
+      "detail": [
+        "보철치료 담보는 약관에서 정한 연간 지급 횟수나 한도가 있을 수 있습니다.",
+        "같은 해에 여러 번 치료해도 한도를 넘는 부분은 지급되지 않을 수 있으므로, 치료 종류별 연간 한도를 약관에서 확인해야 합니다."
+      ]
+    },
+    {
+      "id": "guide-pet-disclosure",
+      "title": "반려동물 고지의무",
+      "appliesToTopicIds": ["cov-34"],
+      "reviewStatus": "REVIEW_DRAFT",
+      "policyVerification": "NOT_VERIFIED",
+      "companyApproval": "NOT_CONFIRMED",
+      "detail": [
+        "반려동물 보험도 가입 전 반려동물의 질병·사고·치료 이력 등을 사실대로 알려야 합니다.",
+        "사실과 다르게 알리면 약관에 따라 보장이 제한될 수 있으며, 알려야 할 항목은 반려동물 전용 청약서와 약관에서 확인해야 합니다."
+      ]
+    }
+  ]
+}

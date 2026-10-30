@@ -1,0 +1,14 @@
+{
+  "dataset_type": "product_display_merges",
+  "version": "2026-10-30",
+  "notice": "상품별 안내에서 여러 상품을 하나의 항목으로 보여 주는 표시 설정입니다. 원래 상품 데이터(data/wanpan-products.json)와 상품 ID는 그대로 두며, 목록·검색·즐겨찾기·최근 확인에서는 통합 항목 하나로 처리합니다. 기존에 저장된 구성 상품 ID(즐겨찾기·최근 확인·상세 주소)는 통합 항목으로 연결됩니다. 검색은 통합 항목명과 구성 상품명을 모두 대상으로 합니다.",
+  "merges": [
+    {
+      "id": "merged-driver-bike",
+      "displayName": "뉴하이카운전자·바이크보험",
+      "memberProductIds": ["product-011", "product-012"],
+      "confirmedBy": "USER",
+      "confirmedDate": "2026-10-30"
+    }
+  ]
+}

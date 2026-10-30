@@ -1,0 +1,1103 @@
+{
+  "schemaVersion": "1.0",
+  "dataset": "wanpan-integrated-draft",
+  "customerFacing": false,
+  "deploymentReady": false,
+  "guidance": {
+    "ignoreSourcePublicationAndLaunchDatesForMatching": true,
+    "doNotIgnoreCoverageWaitingAndReductionPeriods": true,
+    "updates": "User supplies changes separately",
+    "noRelatedProductsInCoverageView": true,
+    "preserveExistingAppUI": true
+  },
+  "coreExplanations": [
+    {
+      "id": "core-001",
+      "topic": "고지의무",
+      "coreExplanation": "반려동물의 질병·사고 및 치료 이력 등 계약 전 알릴 의무사항은 사실대로 알려야 합니다.",
+      "extraExplanation": null,
+      "wordingStatus": "USER_CONFIRMED",
+      "policyVerification": "NOT_VERIFIED",
+      "companyApproval": "NOT_CONFIRMED"
+    },
+    {
+      "id": "core-002",
+      "topic": "반려견 의료비 비례보상",
+      "coreExplanation": "반려동물 의료비 담보는 중복 가입해도 실제 손해액을 한도로 비례보상합니다.",
+      "extraExplanation": null,
+      "wordingStatus": "USER_CONFIRMED",
+      "policyVerification": "NOT_VERIFIED",
+      "companyApproval": "NOT_CONFIRMED"
+    },
+    {
+      "id": "core-003",
+      "topic": "자기부담금",
+      "coreExplanation": "반려동물 의료비 보험금은 자기부담금을 차감한 후 지급됩니다.",
+      "extraExplanation": null,
+      "wordingStatus": "USER_CONFIRMED",
+      "policyVerification": "NOT_VERIFIED",
+      "companyApproval": "NOT_CONFIRMED"
+    },
+    {
+      "id": "core-004",
+      "topic": "반려견배상책임",
+      "coreExplanation": "반려견배상책임 담보는 중복 가입해도 실제 손해액을 한도로 비례보상합니다.",
+      "extraExplanation": null,
+      "wordingStatus": "USER_CONFIRMED",
+      "policyVerification": "NOT_VERIFIED",
+      "companyApproval": "NOT_CONFIRMED"
+    },
+    {
+      "id": "core-005",
+      "topic": "갱신형 보험료 변동",
+      "coreExplanation": "갱신형 담보는 갱신 시 보험료가 인상되거나 인하되어 변동될 수 있습니다.",
+      "extraExplanation": null,
+      "wordingStatus": "USER_CONFIRMED",
+      "policyVerification": "NOT_VERIFIED",
+      "companyApproval": "NOT_CONFIRMED"
+    },
+    {
+      "id": "core-006",
+      "topic": "특약별 보장기간",
+      "coreExplanation": "기본계약과 선택특약의 보장기간은 서로 다를 수 있습니다.",
+      "extraExplanation": null,
+      "wordingStatus": "USER_CONFIRMED",
+      "policyVerification": "NOT_VERIFIED",
+      "companyApproval": "NOT_CONFIRMED"
+    },
+    {
+      "id": "core-007",
+      "topic": "암담보 면책기간",
+      "coreExplanation": "암 관련 담보의 보장은 가입 후 91일째부터 개시됩니다.",
+      "extraExplanation": null,
+      "wordingStatus": "USER_CONFIRMED",
+      "policyVerification": "NOT_VERIFIED",
+      "companyApproval": "NOT_CONFIRMED"
+    },
+    {
+      "id": "core-008",
+      "topic": "재진단암 지급조건",
+      "coreExplanation": "첫 번째 암 진단 확정 후 2년이 경과하고 약관에서 정한 재진단암으로 진단되면 보험금을 지급합니다.",
+      "extraExplanation": null,
+      "wordingStatus": "USER_CONFIRMED",
+      "policyVerification": "NOT_VERIFIED",
+      "companyApproval": "NOT_CONFIRMED"
+    },
+    {
+      "id": "core-009",
+      "topic": "암담보 감액기간",
+      "coreExplanation": "해당 암진단 담보는 가입 후 1년간 보험금의 50%를 지급합니다.",
+      "extraExplanation": null,
+      "wordingStatus": "USER_CONFIRMED",
+      "policyVerification": "NOT_VERIFIED",
+      "companyApproval": "NOT_CONFIRMED"
+    },
+    {
+      "id": "core-010",
+      "topic": "암 간접치료 보장범위",
+      "coreExplanation": "해당 암치료 담보는 암의 직접적인 치료만 보장하며, 후유증이나 합병증 치료는 보장하지 않습니다.",
+      "extraExplanation": null,
+      "wordingStatus": "USER_CONFIRMED",
+      "policyVerification": "NOT_VERIFIED",
+      "companyApproval": "NOT_CONFIRMED"
+    },
+    {
+      "id": "core-011",
+      "topic": "수술급여금 차등지급",
+      "coreExplanation": "수술 종류에 따라 수술급여금이 다르게 지급됩니다.",
+      "extraExplanation": null,
+      "wordingStatus": "USER_CONFIRMED",
+      "policyVerification": "NOT_VERIFIED",
+      "companyApproval": "NOT_CONFIRMED"
+    },
+    {
+      "id": "core-012",
+      "topic": "벌금 비례보상",
+      "coreExplanation": "화재·과실치사상 벌금 담보는 실제 손해액을 한도로 비례보상합니다.",
+      "extraExplanation": null,
+      "wordingStatus": "USER_CONFIRMED",
+      "policyVerification": "NOT_VERIFIED",
+      "companyApproval": "NOT_CONFIRMED"
+    },
+    {
+      "id": "core-013",
+      "topic": "일상생활배상책임 비례보상",
+      "coreExplanation": "일상생활배상책임 담보는 실제 손해액을 한도로 비례보상합니다.",
+      "extraExplanation": null,
+      "wordingStatus": "USER_CONFIRMED",
+      "policyVerification": "NOT_VERIFIED",
+      "companyApproval": "NOT_CONFIRMED"
+    },
+    {
+      "id": "core-014",
+      "topic": "법률비용 비례보상",
+      "coreExplanation": "해당 법률비용 담보는 실제 손해액을 한도로 비례보상합니다.",
+      "extraExplanation": null,
+      "wordingStatus": "USER_CONFIRMED",
+      "policyVerification": "NOT_VERIFIED",
+      "companyApproval": "NOT_CONFIRMED"
+    },
+    {
+      "id": "core-015",
+      "topic": "홀인원비용 비례보상",
+      "coreExplanation": "홀인원비용 담보는 실제 손해액을 한도로 비례보상합니다.",
+      "extraExplanation": null,
+      "wordingStatus": "USER_CONFIRMED",
+      "policyVerification": "NOT_VERIFIED",
+      "companyApproval": "NOT_CONFIRMED"
+    },
+    {
+      "id": "core-016",
+      "topic": "가전제품 수리비용 비례보상",
+      "coreExplanation": "가전제품 수리비용 담보는 실제 손해액을 한도로 비례보상합니다.",
+      "extraExplanation": null,
+      "wordingStatus": "USER_CONFIRMED",
+      "policyVerification": "NOT_VERIFIED",
+      "companyApproval": "NOT_CONFIRMED"
+    },
+    {
+      "id": "core-017",
+      "topic": "운전자 비용담보 비례보상",
+      "coreExplanation": "변호사선임비용·벌금·자동차사고처리지원금 등 해당 운전자 비용담보는 실제 손해액을 한도로 비례보상합니다.",
+      "extraExplanation": null,
+      "wordingStatus": "USER_CONFIRMED",
+      "policyVerification": "NOT_VERIFIED",
+      "companyApproval": "NOT_CONFIRMED"
+    },
+    {
+      "id": "core-018",
+      "topic": "운전자 면책사항",
+      "coreExplanation": "도주·음주·무면허 운전 중 발생한 사고는 해당 운전자 비용담보에서 보장하지 않습니다.",
+      "extraExplanation": null,
+      "wordingStatus": "USER_CONFIRMED",
+      "policyVerification": "NOT_VERIFIED",
+      "companyApproval": "NOT_CONFIRMED"
+    },
+    {
+      "id": "core-019",
+      "topic": "자녀할인",
+      "coreExplanation": "만 12세 이하 자녀가 있는 경우 해당 조건에 따라 보험료 할인을 받을 수 있습니다.",
+      "extraExplanation": null,
+      "wordingStatus": "USER_CONFIRMED",
+      "policyVerification": "NOT_VERIFIED",
+      "companyApproval": "NOT_CONFIRMED"
+    },
+    {
+      "id": "core-020",
+      "topic": "대리청구인 지정",
+      "coreExplanation": "보험금을 직접 청구하기 어려운 경우를 대비해 지정대리청구인을 미리 지정할 수 있습니다.",
+      "extraExplanation": null,
+      "wordingStatus": "USER_CONFIRMED",
+      "policyVerification": "NOT_VERIFIED",
+      "companyApproval": "NOT_CONFIRMED"
+    },
+    {
+      "id": "core-021",
+      "topic": "치매 보장대상 질병 및 조건",
+      "coreExplanation": "치매진단비는 경도·중등도·중증 치매척도검사 결과에 따라 보장됩니다.",
+      "extraExplanation": null,
+      "wordingStatus": "USER_CONFIRMED",
+      "policyVerification": "NOT_VERIFIED",
+      "companyApproval": "NOT_CONFIRMED"
+    },
+    {
+      "id": "core-022",
+      "topic": "치매보장 상품 성격",
+      "coreExplanation": "치매 관련 보장은 저축이나 연금 목적이 아닌 보험사고에 대비하는 보장성 보험입니다.",
+      "extraExplanation": null,
+      "wordingStatus": "USER_CONFIRMED",
+      "policyVerification": "NOT_VERIFIED",
+      "companyApproval": "NOT_CONFIRMED"
+    },
+    {
+      "id": "core-023",
+      "topic": "유병자보험 간편심사",
+      "coreExplanation": "간편심사 보험은 일반심사 보험보다 보험료가 비싸며, 건강상태가 양호할 경우 더 저렴한 일반심사 보험에 가입할 수 있습니다.",
+      "extraExplanation": null,
+      "wordingStatus": "USER_CONFIRMED",
+      "policyVerification": "NOT_VERIFIED",
+      "companyApproval": "NOT_CONFIRMED"
+    },
+    {
+      "id": "core-024",
+      "topic": "실손의료비 비례보상",
+      "coreExplanation": "실손의료비 담보는 중복 가입해도 실제 손해액을 한도로 비례보상합니다.",
+      "extraExplanation": null,
+      "wordingStatus": "USER_CONFIRMED",
+      "policyVerification": "NOT_VERIFIED",
+      "companyApproval": "NOT_CONFIRMED"
+    },
+    {
+      "id": "core-025",
+      "topic": "실손의료비 보장 제외",
+      "coreExplanation": "치료 목적이 아닌 의료비와 해당 한방·치과 비급여 의료비는 보장하지 않습니다.",
+      "extraExplanation": null,
+      "wordingStatus": "USER_CONFIRMED",
+      "policyVerification": "NOT_VERIFIED",
+      "companyApproval": "NOT_CONFIRMED"
+    },
+    {
+      "id": "core-026",
+      "topic": "표준형 자기부담금",
+      "coreExplanation": "표준형 실손의료비의 자기부담률은 중증 비급여 30%, 비중증 비급여 50%입니다.",
+      "extraExplanation": null,
+      "wordingStatus": "USER_CONFIRMED",
+      "policyVerification": "NOT_VERIFIED",
+      "companyApproval": "NOT_CONFIRMED"
+    },
+    {
+      "id": "core-027",
+      "topic": "유병자형 자기부담금",
+      "coreExplanation": "유병력자 실손의료비의 보장대상 입원 급여항목 자기부담률은 30%입니다.",
+      "extraExplanation": null,
+      "wordingStatus": "USER_CONFIRMED",
+      "policyVerification": "NOT_VERIFIED",
+      "companyApproval": "NOT_CONFIRMED"
+    },
+    {
+      "id": "core-028",
+      "topic": "출생 이후 보장 개시",
+      "coreExplanation": "태아 관련 담보는 출생 이후 보험계약 체결 시점부터 소급하여 보장됩니다.",
+      "extraExplanation": null,
+      "wordingStatus": "USER_CONFIRMED",
+      "policyVerification": "NOT_VERIFIED",
+      "companyApproval": "NOT_CONFIRMED"
+    },
+    {
+      "id": "core-029",
+      "topic": "다자녀 할인",
+      "coreExplanation": "자녀가 두 명 이상인 경우 해당 조건에 따라 보험료 할인을 받을 수 있습니다.",
+      "extraExplanation": null,
+      "wordingStatus": "USER_CONFIRMED",
+      "policyVerification": "NOT_VERIFIED",
+      "companyApproval": "NOT_CONFIRMED"
+    },
+    {
+      "id": "core-030",
+      "topic": "중도해지 시 해지환급금",
+      "coreExplanation": "해지환급금 미지급형은 보험료 납입기간 중 계약을 해지하면 해지환급금이 지급되지 않습니다.",
+      "extraExplanation": "보험료 납입기간 이후의 해지환급금은 가입한 상품 유형과 약관에 따라 달라질 수 있습니다. 해지환급금 미지급형에 해당하는 계약인지 확인해야 합니다.",
+      "wordingStatus": "USER_CONFIRMED",
+      "policyVerification": "NOT_VERIFIED",
+      "companyApproval": "NOT_CONFIRMED"
+    }
+  ],
+  "productMaster": [
+    {
+      "id": "product-001",
+      "name": "퍼펙트플러스종합보험",
+      "productCodes": [
+        "Hi2610"
+      ],
+      "scriptStatus": "REVIEW_PENDING",
+      "active": true
+    },
+    {
+      "id": "product-002",
+      "name": "내맘엔(N)맞춤간편건강보험",
+      "productCodes": [
+        "Hi2607"
+      ],
+      "scriptStatus": "REVIEW_PENDING",
+      "active": true
+    },
+    {
+      "id": "product-003",
+      "name": "인생의품격종합보험",
+      "productCodes": [
+        "Hi2607"
+      ],
+      "scriptStatus": "REVIEW_PENDING",
+      "active": true
+    },
+    {
+      "id": "product-004",
+      "name": "굿앤굿1540종합보험",
+      "productCodes": [
+        "Hi2607"
+      ],
+      "scriptStatus": "REVIEW_PENDING",
+      "active": true
+    },
+    {
+      "id": "product-005",
+      "name": "케어더블암치매보험",
+      "productCodes": [
+        "Hi2607"
+      ],
+      "scriptStatus": "REVIEW_PENDING",
+      "active": true
+    },
+    {
+      "id": "product-006",
+      "name": "내삶엔(3N)맞춤간편건강보험",
+      "productCodes": [
+        "Hi2607"
+      ],
+      "scriptStatus": "REVIEW_PENDING",
+      "active": true
+    },
+    {
+      "id": "product-007",
+      "name": "굿앤굿어린이종합보험",
+      "productCodes": [
+        "Hi2607"
+      ],
+      "scriptStatus": "REVIEW_PENDING",
+      "active": true
+    },
+    {
+      "id": "product-008",
+      "name": "간편한3.10.10건강보험",
+      "productCodes": [
+        "Hi2607"
+      ],
+      "scriptStatus": "REVIEW_PENDING",
+      "active": true
+    },
+    {
+      "id": "product-009",
+      "name": "굿앤굿스타종합보험",
+      "productCodes": [
+        "Hi2607"
+      ],
+      "scriptStatus": "REVIEW_PENDING",
+      "active": true
+    },
+    {
+      "id": "product-010",
+      "name": "두배받는암보험",
+      "productCodes": [
+        "Hi2607"
+      ],
+      "scriptStatus": "REVIEW_PENDING",
+      "active": true
+    },
+    {
+      "id": "product-011",
+      "name": "뉴하이카운전자상해보험",
+      "productCodes": [
+        "Hi2607"
+      ],
+      "scriptStatus": "REVIEW_PENDING",
+      "active": true
+    },
+    {
+      "id": "product-012",
+      "name": "하이바이크운전자보험",
+      "productCodes": [
+        "Hi2601"
+      ],
+      "scriptStatus": "REVIEW_PENDING",
+      "active": true
+    },
+    {
+      "id": "product-013",
+      "name": "굿앤굿우리펫보험",
+      "productCodes": [
+        "Hi2601",
+        "Hi2605"
+      ],
+      "scriptStatus": "REVIEW_PENDING",
+      "active": true
+    },
+    {
+      "id": "product-014",
+      "name": "행복가득생활보장보험",
+      "productCodes": [
+        "Hi2601"
+      ],
+      "scriptStatus": "REVIEW_PENDING",
+      "active": true
+    },
+    {
+      "id": "product-015",
+      "name": "성공마스터재산종합보험",
+      "productCodes": [
+        "Hi2601"
+      ],
+      "scriptStatus": "REVIEW_PENDING",
+      "active": true
+    },
+    {
+      "id": "product-016",
+      "name": "퍼펙트케어간병보험",
+      "productCodes": [
+        "Hi2607"
+      ],
+      "scriptStatus": "REVIEW_PENDING",
+      "active": true
+    },
+    {
+      "id": "product-017",
+      "name": "사랑드림단체상해보험",
+      "productCodes": [
+        "Hi2601"
+      ],
+      "scriptStatus": "EXCLUDED_BY_USER",
+      "active": false
+    },
+    {
+      "id": "product-018",
+      "name": "굿앤굿어린이치아보험",
+      "productCodes": [
+        "Hi2601"
+      ],
+      "scriptStatus": "REVIEW_PENDING",
+      "active": true
+    },
+    {
+      "id": "product-019",
+      "name": "밝게웃는얼굴치아보험",
+      "productCodes": [
+        "Hi2601"
+      ],
+      "scriptStatus": "REVIEW_PENDING",
+      "active": true
+    },
+    {
+      "id": "product-020",
+      "name": "유병력자실손의료비보장보험",
+      "productCodes": [
+        "Hi2607"
+      ],
+      "scriptStatus": "REVIEW_PENDING",
+      "active": true
+    },
+    {
+      "id": "product-021",
+      "name": "노후실손의료비보장보험",
+      "productCodes": [
+        "Hi2607"
+      ],
+      "scriptStatus": "EXCLUDED_BY_USER",
+      "active": false
+    },
+    {
+      "id": "product-022",
+      "name": "실손의료비보장보험",
+      "productCodes": [
+        "Hi2607"
+      ],
+      "scriptStatus": "REVIEW_PENDING",
+      "active": true
+    },
+    {
+      "id": "product-023",
+      "name": "리치웨이저축보험",
+      "productCodes": [
+        "Hi2601"
+      ],
+      "scriptStatus": "EXCLUDED_BY_USER",
+      "active": false
+    },
+    {
+      "id": "product-024",
+      "name": "연금저축손해보험더해상노후웰스보험",
+      "productCodes": [
+        "Hi2601"
+      ],
+      "scriptStatus": "REVIEW_PENDING",
+      "active": true
+    }
+  ],
+  "productExplanationLinks": [
+    {
+      "productId": "product-013",
+      "explanationId": "core-001",
+      "sourceIndex": 1,
+      "mappingStatus": "SOURCE_TOPIC_MATCH_NEEDS_POLICY_VALIDATION"
+    },
+    {
+      "productId": "product-013",
+      "explanationId": "core-002",
+      "sourceIndex": 1,
+      "mappingStatus": "SOURCE_TOPIC_MATCH_NEEDS_POLICY_VALIDATION"
+    },
+    {
+      "productId": "product-013",
+      "explanationId": "core-003",
+      "sourceIndex": 1,
+      "mappingStatus": "SOURCE_TOPIC_MATCH_NEEDS_POLICY_VALIDATION"
+    },
+    {
+      "productId": "product-013",
+      "explanationId": "core-004",
+      "sourceIndex": 1,
+      "mappingStatus": "SOURCE_TOPIC_MATCH_NEEDS_POLICY_VALIDATION"
+    },
+    {
+      "productId": "product-013",
+      "explanationId": "core-005",
+      "sourceIndex": 1,
+      "mappingStatus": "SOURCE_TOPIC_MATCH_NEEDS_POLICY_VALIDATION"
+    },
+    {
+      "productId": "product-013",
+      "explanationId": "core-006",
+      "sourceIndex": 1,
+      "mappingStatus": "SOURCE_TOPIC_MATCH_NEEDS_POLICY_VALIDATION"
+    },
+    {
+      "productId": "product-010",
+      "explanationId": "core-007",
+      "sourceIndex": 2,
+      "mappingStatus": "SOURCE_TOPIC_MATCH_NEEDS_POLICY_VALIDATION"
+    },
+    {
+      "productId": "product-010",
+      "explanationId": "core-008",
+      "sourceIndex": 2,
+      "mappingStatus": "SOURCE_TOPIC_MATCH_NEEDS_POLICY_VALIDATION"
+    },
+    {
+      "productId": "product-010",
+      "explanationId": "core-009",
+      "sourceIndex": 2,
+      "mappingStatus": "SOURCE_TOPIC_MATCH_NEEDS_POLICY_VALIDATION"
+    },
+    {
+      "productId": "product-010",
+      "explanationId": "core-010",
+      "sourceIndex": 2,
+      "mappingStatus": "SOURCE_TOPIC_MATCH_NEEDS_POLICY_VALIDATION"
+    },
+    {
+      "productId": "product-010",
+      "explanationId": "core-005",
+      "sourceIndex": 2,
+      "mappingStatus": "SOURCE_TOPIC_MATCH_NEEDS_POLICY_VALIDATION"
+    },
+    {
+      "productId": "product-010",
+      "explanationId": "core-006",
+      "sourceIndex": 2,
+      "mappingStatus": "SOURCE_TOPIC_MATCH_NEEDS_POLICY_VALIDATION"
+    },
+    {
+      "productId": "product-011",
+      "explanationId": "core-011",
+      "sourceIndex": 3,
+      "mappingStatus": "PROVISIONAL_REVIEW_REQUIRED"
+    },
+    {
+      "productId": "product-011",
+      "explanationId": "core-017",
+      "sourceIndex": 3,
+      "mappingStatus": "PROVISIONAL_REVIEW_REQUIRED"
+    },
+    {
+      "productId": "product-011",
+      "explanationId": "core-018",
+      "sourceIndex": 3,
+      "mappingStatus": "PROVISIONAL_REVIEW_REQUIRED"
+    },
+    {
+      "productId": "product-011",
+      "explanationId": "core-019",
+      "sourceIndex": 3,
+      "mappingStatus": "PROVISIONAL_REVIEW_REQUIRED"
+    },
+    {
+      "productId": "product-011",
+      "explanationId": "core-005",
+      "sourceIndex": 3,
+      "mappingStatus": "PROVISIONAL_REVIEW_REQUIRED"
+    },
+    {
+      "productId": "product-011",
+      "explanationId": "core-006",
+      "sourceIndex": 3,
+      "mappingStatus": "PROVISIONAL_REVIEW_REQUIRED"
+    },
+    {
+      "productId": "product-012",
+      "explanationId": "core-017",
+      "sourceIndex": 3,
+      "mappingStatus": "PROVISIONAL_REVIEW_REQUIRED"
+    },
+    {
+      "productId": "product-012",
+      "explanationId": "core-018",
+      "sourceIndex": 3,
+      "mappingStatus": "PROVISIONAL_REVIEW_REQUIRED"
+    },
+    {
+      "productId": "product-012",
+      "explanationId": "core-005",
+      "sourceIndex": 3,
+      "mappingStatus": "PROVISIONAL_REVIEW_REQUIRED"
+    },
+    {
+      "productId": "product-012",
+      "explanationId": "core-006",
+      "sourceIndex": 3,
+      "mappingStatus": "PROVISIONAL_REVIEW_REQUIRED"
+    },
+    {
+      "productId": "product-016",
+      "explanationId": "core-020",
+      "sourceIndex": 4,
+      "mappingStatus": "SOURCE_TOPIC_MATCH_NEEDS_POLICY_VALIDATION"
+    },
+    {
+      "productId": "product-016",
+      "explanationId": "core-021",
+      "sourceIndex": 4,
+      "mappingStatus": "SOURCE_TOPIC_MATCH_NEEDS_POLICY_VALIDATION"
+    },
+    {
+      "productId": "product-016",
+      "explanationId": "core-022",
+      "sourceIndex": 4,
+      "mappingStatus": "SOURCE_TOPIC_MATCH_NEEDS_POLICY_VALIDATION"
+    },
+    {
+      "productId": "product-016",
+      "explanationId": "core-023",
+      "sourceIndex": 4,
+      "mappingStatus": "SOURCE_TOPIC_MATCH_NEEDS_POLICY_VALIDATION"
+    },
+    {
+      "productId": "product-014",
+      "explanationId": "core-011",
+      "sourceIndex": 5,
+      "mappingStatus": "SOURCE_TOPIC_MATCH_NEEDS_POLICY_VALIDATION"
+    },
+    {
+      "productId": "product-014",
+      "explanationId": "core-012",
+      "sourceIndex": 5,
+      "mappingStatus": "SOURCE_TOPIC_MATCH_NEEDS_POLICY_VALIDATION"
+    },
+    {
+      "productId": "product-014",
+      "explanationId": "core-013",
+      "sourceIndex": 5,
+      "mappingStatus": "SOURCE_TOPIC_MATCH_NEEDS_POLICY_VALIDATION"
+    },
+    {
+      "productId": "product-014",
+      "explanationId": "core-014",
+      "sourceIndex": 5,
+      "mappingStatus": "SOURCE_TOPIC_MATCH_NEEDS_POLICY_VALIDATION"
+    },
+    {
+      "productId": "product-014",
+      "explanationId": "core-015",
+      "sourceIndex": 5,
+      "mappingStatus": "SOURCE_TOPIC_MATCH_NEEDS_POLICY_VALIDATION"
+    },
+    {
+      "productId": "product-014",
+      "explanationId": "core-016",
+      "sourceIndex": 5,
+      "mappingStatus": "SOURCE_TOPIC_MATCH_NEEDS_POLICY_VALIDATION"
+    },
+    {
+      "productId": "product-014",
+      "explanationId": "core-005",
+      "sourceIndex": 5,
+      "mappingStatus": "SOURCE_TOPIC_MATCH_NEEDS_POLICY_VALIDATION"
+    },
+    {
+      "productId": "product-014",
+      "explanationId": "core-006",
+      "sourceIndex": 5,
+      "mappingStatus": "SOURCE_TOPIC_MATCH_NEEDS_POLICY_VALIDATION"
+    },
+    {
+      "productId": "product-015",
+      "explanationId": "core-012",
+      "sourceIndex": 6,
+      "mappingStatus": "SOURCE_TOPIC_MATCH_NEEDS_POLICY_VALIDATION"
+    },
+    {
+      "productId": "product-015",
+      "explanationId": "core-013",
+      "sourceIndex": 6,
+      "mappingStatus": "SOURCE_TOPIC_MATCH_NEEDS_POLICY_VALIDATION"
+    },
+    {
+      "productId": "product-015",
+      "explanationId": "core-014",
+      "sourceIndex": 6,
+      "mappingStatus": "SOURCE_TOPIC_MATCH_NEEDS_POLICY_VALIDATION"
+    },
+    {
+      "productId": "product-015",
+      "explanationId": "core-016",
+      "sourceIndex": 6,
+      "mappingStatus": "SOURCE_TOPIC_MATCH_NEEDS_POLICY_VALIDATION"
+    },
+    {
+      "productId": "product-015",
+      "explanationId": "core-005",
+      "sourceIndex": 6,
+      "mappingStatus": "SOURCE_TOPIC_MATCH_NEEDS_POLICY_VALIDATION"
+    },
+    {
+      "productId": "product-015",
+      "explanationId": "core-006",
+      "sourceIndex": 6,
+      "mappingStatus": "SOURCE_TOPIC_MATCH_NEEDS_POLICY_VALIDATION"
+    },
+    {
+      "productId": "product-001",
+      "explanationId": "core-011",
+      "sourceIndex": 8,
+      "mappingStatus": "SOURCE_TOPIC_MATCH_NEEDS_POLICY_VALIDATION"
+    },
+    {
+      "productId": "product-001",
+      "explanationId": "core-007",
+      "sourceIndex": 8,
+      "mappingStatus": "SOURCE_TOPIC_MATCH_NEEDS_POLICY_VALIDATION"
+    },
+    {
+      "productId": "product-001",
+      "explanationId": "core-008",
+      "sourceIndex": 8,
+      "mappingStatus": "SOURCE_TOPIC_MATCH_NEEDS_POLICY_VALIDATION"
+    },
+    {
+      "productId": "product-001",
+      "explanationId": "core-009",
+      "sourceIndex": 8,
+      "mappingStatus": "SOURCE_TOPIC_MATCH_NEEDS_POLICY_VALIDATION"
+    },
+    {
+      "productId": "product-001",
+      "explanationId": "core-010",
+      "sourceIndex": 8,
+      "mappingStatus": "SOURCE_TOPIC_MATCH_NEEDS_POLICY_VALIDATION"
+    },
+    {
+      "productId": "product-001",
+      "explanationId": "core-012",
+      "sourceIndex": 8,
+      "mappingStatus": "SOURCE_TOPIC_MATCH_NEEDS_POLICY_VALIDATION"
+    },
+    {
+      "productId": "product-001",
+      "explanationId": "core-013",
+      "sourceIndex": 8,
+      "mappingStatus": "SOURCE_TOPIC_MATCH_NEEDS_POLICY_VALIDATION"
+    },
+    {
+      "productId": "product-001",
+      "explanationId": "core-014",
+      "sourceIndex": 8,
+      "mappingStatus": "SOURCE_TOPIC_MATCH_NEEDS_POLICY_VALIDATION"
+    },
+    {
+      "productId": "product-001",
+      "explanationId": "core-005",
+      "sourceIndex": 8,
+      "mappingStatus": "SOURCE_TOPIC_MATCH_NEEDS_POLICY_VALIDATION"
+    },
+    {
+      "productId": "product-001",
+      "explanationId": "core-006",
+      "sourceIndex": 8,
+      "mappingStatus": "SOURCE_TOPIC_MATCH_NEEDS_POLICY_VALIDATION"
+    },
+    {
+      "productId": "product-020",
+      "explanationId": "core-024",
+      "sourceIndex": 9,
+      "mappingStatus": "PROVISIONAL_REVIEW_REQUIRED"
+    },
+    {
+      "productId": "product-020",
+      "explanationId": "core-025",
+      "sourceIndex": 9,
+      "mappingStatus": "PROVISIONAL_REVIEW_REQUIRED"
+    },
+    {
+      "productId": "product-020",
+      "explanationId": "core-027",
+      "sourceIndex": 9,
+      "mappingStatus": "PROVISIONAL_REVIEW_REQUIRED"
+    },
+    {
+      "productId": "product-020",
+      "explanationId": "core-005",
+      "sourceIndex": 9,
+      "mappingStatus": "PROVISIONAL_REVIEW_REQUIRED"
+    },
+    {
+      "productId": "product-020",
+      "explanationId": "core-006",
+      "sourceIndex": 9,
+      "mappingStatus": "PROVISIONAL_REVIEW_REQUIRED"
+    },
+    {
+      "productId": "product-022",
+      "explanationId": "core-024",
+      "sourceIndex": 9,
+      "mappingStatus": "PROVISIONAL_REVIEW_REQUIRED"
+    },
+    {
+      "productId": "product-022",
+      "explanationId": "core-025",
+      "sourceIndex": 9,
+      "mappingStatus": "PROVISIONAL_REVIEW_REQUIRED"
+    },
+    {
+      "productId": "product-022",
+      "explanationId": "core-026",
+      "sourceIndex": 9,
+      "mappingStatus": "PROVISIONAL_REVIEW_REQUIRED"
+    },
+    {
+      "productId": "product-022",
+      "explanationId": "core-005",
+      "sourceIndex": 9,
+      "mappingStatus": "PROVISIONAL_REVIEW_REQUIRED"
+    },
+    {
+      "productId": "product-022",
+      "explanationId": "core-006",
+      "sourceIndex": 9,
+      "mappingStatus": "PROVISIONAL_REVIEW_REQUIRED"
+    },
+    {
+      "productId": "product-009",
+      "explanationId": "core-011",
+      "sourceIndex": 11,
+      "mappingStatus": "SOURCE_TOPIC_MATCH_NEEDS_POLICY_VALIDATION"
+    },
+    {
+      "productId": "product-009",
+      "explanationId": "core-007",
+      "sourceIndex": 11,
+      "mappingStatus": "SOURCE_TOPIC_MATCH_NEEDS_POLICY_VALIDATION"
+    },
+    {
+      "productId": "product-009",
+      "explanationId": "core-008",
+      "sourceIndex": 11,
+      "mappingStatus": "SOURCE_TOPIC_MATCH_NEEDS_POLICY_VALIDATION"
+    },
+    {
+      "productId": "product-009",
+      "explanationId": "core-009",
+      "sourceIndex": 11,
+      "mappingStatus": "SOURCE_TOPIC_MATCH_NEEDS_POLICY_VALIDATION"
+    },
+    {
+      "productId": "product-009",
+      "explanationId": "core-010",
+      "sourceIndex": 11,
+      "mappingStatus": "SOURCE_TOPIC_MATCH_NEEDS_POLICY_VALIDATION"
+    },
+    {
+      "productId": "product-009",
+      "explanationId": "core-013",
+      "sourceIndex": 11,
+      "mappingStatus": "SOURCE_TOPIC_MATCH_NEEDS_POLICY_VALIDATION"
+    },
+    {
+      "productId": "product-009",
+      "explanationId": "core-014",
+      "sourceIndex": 11,
+      "mappingStatus": "SOURCE_TOPIC_MATCH_NEEDS_POLICY_VALIDATION"
+    },
+    {
+      "productId": "product-009",
+      "explanationId": "core-005",
+      "sourceIndex": 11,
+      "mappingStatus": "SOURCE_TOPIC_MATCH_NEEDS_POLICY_VALIDATION"
+    },
+    {
+      "productId": "product-009",
+      "explanationId": "core-006",
+      "sourceIndex": 11,
+      "mappingStatus": "SOURCE_TOPIC_MATCH_NEEDS_POLICY_VALIDATION"
+    },
+    {
+      "productId": "product-005",
+      "explanationId": "core-007",
+      "sourceIndex": 13,
+      "mappingStatus": "SOURCE_TOPIC_MATCH_NEEDS_POLICY_VALIDATION"
+    },
+    {
+      "productId": "product-005",
+      "explanationId": "core-008",
+      "sourceIndex": 13,
+      "mappingStatus": "SOURCE_TOPIC_MATCH_NEEDS_POLICY_VALIDATION"
+    },
+    {
+      "productId": "product-005",
+      "explanationId": "core-009",
+      "sourceIndex": 13,
+      "mappingStatus": "SOURCE_TOPIC_MATCH_NEEDS_POLICY_VALIDATION"
+    },
+    {
+      "productId": "product-005",
+      "explanationId": "core-010",
+      "sourceIndex": 13,
+      "mappingStatus": "SOURCE_TOPIC_MATCH_NEEDS_POLICY_VALIDATION"
+    },
+    {
+      "productId": "product-005",
+      "explanationId": "core-020",
+      "sourceIndex": 13,
+      "mappingStatus": "SOURCE_TOPIC_MATCH_NEEDS_POLICY_VALIDATION"
+    },
+    {
+      "productId": "product-005",
+      "explanationId": "core-021",
+      "sourceIndex": 13,
+      "mappingStatus": "SOURCE_TOPIC_MATCH_NEEDS_POLICY_VALIDATION"
+    },
+    {
+      "productId": "product-005",
+      "explanationId": "core-022",
+      "sourceIndex": 13,
+      "mappingStatus": "SOURCE_TOPIC_MATCH_NEEDS_POLICY_VALIDATION"
+    },
+    {
+      "productId": "product-005",
+      "explanationId": "core-023",
+      "sourceIndex": 13,
+      "mappingStatus": "SOURCE_TOPIC_MATCH_NEEDS_POLICY_VALIDATION"
+    },
+    {
+      "productId": "product-005",
+      "explanationId": "core-005",
+      "sourceIndex": 13,
+      "mappingStatus": "SOURCE_TOPIC_MATCH_NEEDS_POLICY_VALIDATION"
+    },
+    {
+      "productId": "product-005",
+      "explanationId": "core-006",
+      "sourceIndex": 13,
+      "mappingStatus": "SOURCE_TOPIC_MATCH_NEEDS_POLICY_VALIDATION"
+    },
+    {
+      "productId": "product-003",
+      "explanationId": "core-030",
+      "sourceIndex": 14,
+      "mappingStatus": "SOURCE_TOPIC_MATCH_NEEDS_POLICY_VALIDATION"
+    },
+    {
+      "productId": "product-003",
+      "explanationId": "core-011",
+      "sourceIndex": 14,
+      "mappingStatus": "SOURCE_TOPIC_MATCH_NEEDS_POLICY_VALIDATION"
+    },
+    {
+      "productId": "product-003",
+      "explanationId": "core-007",
+      "sourceIndex": 14,
+      "mappingStatus": "SOURCE_TOPIC_MATCH_NEEDS_POLICY_VALIDATION"
+    },
+    {
+      "productId": "product-003",
+      "explanationId": "core-009",
+      "sourceIndex": 14,
+      "mappingStatus": "SOURCE_TOPIC_MATCH_NEEDS_POLICY_VALIDATION"
+    },
+    {
+      "productId": "product-003",
+      "explanationId": "core-010",
+      "sourceIndex": 14,
+      "mappingStatus": "SOURCE_TOPIC_MATCH_NEEDS_POLICY_VALIDATION"
+    },
+    {
+      "productId": "product-003",
+      "explanationId": "core-020",
+      "sourceIndex": 14,
+      "mappingStatus": "SOURCE_TOPIC_MATCH_NEEDS_POLICY_VALIDATION"
+    },
+    {
+      "productId": "product-003",
+      "explanationId": "core-021",
+      "sourceIndex": 14,
+      "mappingStatus": "SOURCE_TOPIC_MATCH_NEEDS_POLICY_VALIDATION"
+    },
+    {
+      "productId": "product-003",
+      "explanationId": "core-022",
+      "sourceIndex": 14,
+      "mappingStatus": "SOURCE_TOPIC_MATCH_NEEDS_POLICY_VALIDATION"
+    },
+    {
+      "productId": "product-003",
+      "explanationId": "core-023",
+      "sourceIndex": 14,
+      "mappingStatus": "SOURCE_TOPIC_MATCH_NEEDS_POLICY_VALIDATION"
+    },
+    {
+      "productId": "product-003",
+      "explanationId": "core-005",
+      "sourceIndex": 14,
+      "mappingStatus": "SOURCE_TOPIC_MATCH_NEEDS_POLICY_VALIDATION"
+    },
+    {
+      "productId": "product-003",
+      "explanationId": "core-006",
+      "sourceIndex": 14,
+      "mappingStatus": "SOURCE_TOPIC_MATCH_NEEDS_POLICY_VALIDATION"
+    }
+  ],
+  "unmatchedSourceReferences": [
+    {
+      "sourceIndex": 7,
+      "title": "치아보험",
+      "reason": "현재 상품 마스터와 정확한 대응 불명 또는 별도 담보명 검토 필요"
+    },
+    {
+      "sourceIndex": 10,
+      "title": "어린이Q",
+      "reason": "현재 상품 마스터와 정확한 대응 불명 또는 별도 담보명 검토 필요"
+    },
+    {
+      "sourceIndex": 12,
+      "title": "간편보험",
+      "reason": "현재 상품 마스터와 정확한 대응 불명 또는 별도 담보명 검토 필요"
+    },
+    {
+      "sourceIndex": 15,
+      "title": "굿앤굿2040",
+      "reason": "현재 상품 마스터와 정확한 대응 불명 또는 별도 담보명 검토 필요"
+    }
+  ],
+  "dentalProvisional": [
+    {
+      "rider": "치아담보",
+      "coreExplanation": "틀니 보철치료는 연 1회까지 보장됩니다.",
+      "status": "PENDING_USER_RIDER_CONFIRMATION"
+    },
+    {
+      "rider": "치아담보Ⅱ",
+      "coreExplanation": "틀니는 연 1회, 임플란트는 연 2회까지 보장됩니다.",
+      "status": "PENDING_USER_RIDER_CONFIRMATION"
+    },
+    {
+      "rider": "보철치료 면책기간",
+      "coreExplanation": "치과질환으로 인한 보철치료는 최초 계약일부터 90일째 되는 다음 날부터 보장됩니다.",
+      "status": "PENDING_USER_RIDER_CONFIRMATION"
+    },
+    {
+      "rider": "치아담보 감액기간",
+      "coreExplanation": "치아담보의 치과질환 보철치료는 가입 후 2년간 가입금액의 50%를 지급합니다.",
+      "status": "PENDING_USER_RIDER_CONFIRMATION"
+    },
+    {
+      "rider": "치아담보Ⅱ 감액기간",
+      "coreExplanation": "치아담보Ⅱ의 치과질환 보철치료는 가입 후 1년간 가입금액의 50%를 지급합니다.",
+      "status": "PENDING_USER_RIDER_CONFIRMATION"
+    }
+  ],
+  "notes": [
+    "15종 원본 주제 색인과 사용자가 승인한 30개 문구를 통합한 작업용 초안입니다.",
+    "원본 질문/답변 전체 문구, 상품별 실제 담보 부착 여부, 상품코드 및 최신 약관은 검증되지 않았습니다.",
+    "굿앤굿2040은 마스터의 굿앤굿1540과 자동 연결하지 않았습니다.",
+    "어린이Q 및 간편보험은 현재 마스터의 개별 상품과 자동 연결하지 않았습니다.",
+    "치아보험 5개 문구는 담보명 확인 전이므로 확정 30개에 포함하지 않았습니다.",
+    "3종 제외 상품은 active=false로 보존하여 검색/상품별 안내에서 필터링하며 다른 상품의 공통 설명은 삭제하지 않습니다."
+  ]
+}

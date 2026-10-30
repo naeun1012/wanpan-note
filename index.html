@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>완판노트</title>
+  <!--
+    공유 미리보기(Open Graph) — 2026-10-30 준비
+    - og:url·og:image는 카카오톡·문자 등에서 절대 HTTPS 주소만 인식한다.
+    - 배포 주소가 확정되면 deploy/build-dist.ps1 -SiteUrl "https://..." 로 배포용 index.html에만 아래 표시 자리에 넣는다(원본은 그대로).
+    - 썸네일 파일: assets/images/wanpan-og-image.png (1200×630)
+  -->
+  <meta property="og:url" content="https://naeun1012.github.io/wanpan-note/">
+  <meta property="og:image" content="https://naeun1012.github.io/wanpan-note/assets/images/wanpan-og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="완판노트 - 언제 어디서나, 스마트한 하이플래너를 위한 완판노트">
+  <!-- 검색엔진 노출 방지 (링크를 받은 사람만 접속하도록) -->
+  <meta name="robots" content="noindex, nofollow">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="완판노트">
+  <meta property="og:title" content="완판노트">
+  <meta property="og:description" content="언제 어디서나, 스마트한 하이플래너를 위한 완판노트">
+  <meta property="og:locale" content="ko_KR">
+  <!--
+    Pretendard 웹폰트 (개발환경용)
+    - 출처: https://github.com/orioncactus/pretendard (공식 배포, jsDelivr CDN)
+    - 라이선스: SIL Open Font License 1.1
+    - 운영환경 외부 CDN 사용은 회사 보안정책 검토 후 결정 (미확정)
+  -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <div class="app">
+    <header class="app-header">
+      <div class="container app-header__inner">
+        <a class="app-header__brand" href="#/" aria-label="완판노트 메인으로">
+          <!-- 로고 교체 시 아래 img의 src만 변경 (일러스트 + '완판노트' 글씨 포함 이미지) -->
+          <h1 class="app-header__name">
+            <img class="app-header__logo" src="assets/images/wanpan-logo-v2.png" alt="완판노트" width="1132" height="340">
+          </h1>
+        </a>
+        <p class="app-header__slogan">
+          <span class="app-header__slogan-line">언제 어디서나,</span>
+          <span class="app-header__slogan-line app-header__slogan-line--strong">스마트한 하이플래너를 위한 완판노트</span>
+        </p>
+      </div>
+    </header>
+
+    <div class="app-body">
+    <!-- 개발 미리보기 표시 (localhost·사설 IP + 미리보기 포트일 때만 노출) -->
+    <p class="dev-banner" id="dev-banner" hidden>개발 미리보기 · 개발용 예시 · 고객 설명 사용 금지</p>
+    <main class="app-main container">
+      <!-- 메인 화면 -->
+      <section class="view" id="view-home" aria-label="메인">
+        <form class="search" id="search-form" role="search">
+          <label class="visually-hidden" for="search-input">통합검색</label>
+          <div class="search__field">
+            <svg class="search__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+            <input class="search__input" id="search-input" type="search" placeholder="상품명 또는 담보명을 검색하세요" autocomplete="off" enterkeyhint="search">
+            <button class="search__clear" id="search-clear" type="button" aria-label="검색어 지우기" hidden>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7l10 10M17 7L7 17"/></svg>
+            </button>
+            <button class="search__submit" type="submit" aria-label="검색">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+            </button>
+          </div>
+        </form>
+
+        <section class="search-results" id="search-results" aria-labelledby="search-results-title" hidden>
+          <h2 class="section-title" id="search-results-title">검색 결과</h2>
+          <ul class="item-list" id="search-result-list"></ul>
+          <p class="empty-message" id="search-empty" hidden>검색 결과가 없습니다</p>
+        </section>
+
+        <nav class="menu" id="main-menu" aria-label="주요 메뉴">
+          <!-- 핵심 메뉴 -->
+          <ul class="menu__primary">
+            <li>
+              <a class="feature-card feature-card--navy" href="#/products">
+                <span class="feature-card__top">
+                  <span class="feature-card__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h6"/></svg>
+                  </span>
+                  <span class="feature-card__arrow" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg>
+                  </span>
+                </span>
+                <span class="feature-card__body">
+                  <span class="feature-card__title">상품별 안내</span>
+                  <span class="feature-card__desc">상품별 주요 보장과 고객 설명사항을 확인하세요.</span>
+                </span>
+                <span class="feature-card__link">바로가기 <span aria-hidden="true">→</span></span>
+                <svg class="feature-card__watermark" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6c3-1.5 6-1.5 9 0v13c-3-1.5-6-1.5-9 0z"/><path d="M21 6c-3-1.5-6-1.5-9 0v13c3-1.5 6-1.5 9 0z"/><path d="M14.5 11.5l1.5 1.5 3-3"/></svg>
+              </a>
+            </li>
+            <li>
+              <a class="feature-card feature-card--orange" href="#/coverages">
+                <span class="feature-card__top">
+                  <span class="feature-card__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.5-3 8.5-7 10-4-1.5-7-5.5-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg>
+                  </span>
+                  <span class="feature-card__arrow" aria-hidden="true">
+                    <svg viewBox="0 0 24 24"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg>
+                  </span>
+                </span>
+                <span class="feature-card__body">
+                  <span class="feature-card__title">담보별 안내</span>
+                  <span class="feature-card__desc">담보별 보장내용과 판매 시 유의사항을 확인하세요.</span>
+                </span>
+                <span class="feature-card__link">바로가기 <span aria-hidden="true">→</span></span>
+                <svg class="feature-card__watermark" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 8.5-7 10-4-1.5-7-5.5-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg>
+              </a>
+            </li>
+          </ul>
+
+          <!-- 보조 메뉴 (사전안내 가이드는 메인 노출만 제외, #/guides 화면은 유지) -->
+          <ul class="menu__secondary">
+            <li>
+              <a class="sub-card" href="#/favorites">
+                <span class="sub-card__icon sub-card__icon--orange" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.3 5.9.9-4.25 4.1 1 5.8L12 16.9l-5.25 2.7 1-5.8L3.5 9.7l5.9-.9z"/></svg>
+                </span>
+                <span class="sub-card__text">
+                  <span class="sub-card__title">즐겨찾기</span>
+                  <span class="sub-card__desc">자주 확인하는 상품을 모아 봅니다.</span>
+                </span>
+                <svg class="sub-card__chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- 메뉴 아래: 최근 확인한 상품 · 활용 TIP (검색 중에는 숨김) -->
+        <div class="home-extras" id="home-extras">
+          <section class="home-recent" id="home-recent" aria-labelledby="home-recent-title" hidden>
+            <h2 class="home-recent__title" id="home-recent-title">최근 확인한 상품</h2>
+            <ul class="home-recent__list" id="home-recent-list"></ul>
+          </section>
+
+          <aside class="home-tip" aria-labelledby="home-tip-title">
+            <span class="home-tip__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M9 18h6"/><path d="M10 21h4"/><path d="M12 3a6 6 0 0 0-3.6 10.8c.7.5 1.1 1.3 1.1 2.2h5c0-.9.4-1.7 1.1-2.2A6 6 0 0 0 12 3z"/></svg>
+            </span>
+            <div class="home-tip__body">
+              <h2 class="home-tip__title" id="home-tip-title">완판노트 활용 TIP</h2>
+              <!-- 문구는 js/app.js의 HOME_TIPS에서 메인 진입 시 1개를 무작위로 선택 -->
+              <p class="home-tip__text" id="home-tip-text">자주 확인하는 상품은 별표를 눌러 즐겨찾기에 등록해 보세요.</p>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- 분류별 목록 화면 -->
+      <section class="view" id="view-list" aria-labelledby="list-title" hidden>
+        <div class="list-header">
+          <a class="back-button" href="#/" aria-label="메인으로 돌아가기">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>
+          </a>
+          <h2 class="list-header__title" id="list-title" tabindex="-1"></h2>
+        </div>
+
+        <!-- 상품별 안내 전용: 상품 개수·검색·최근 확인한 상품 -->
+        <div class="product-tools" id="product-tools" hidden>
+          <p class="product-tools__count" id="product-count" aria-live="polite"></p>
+          <form class="search search--compact" id="product-search-form" role="search">
+            <label class="visually-hidden" for="product-search-input">상품 검색</label>
+            <div class="search__field">
+              <svg class="search__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+              <input class="search__input" id="product-search-input" type="search" placeholder="상품명 또는 초성으로 검색" autocomplete="off" enterkeyhint="search">
+              <button class="search__clear" id="product-search-clear" type="button" aria-label="검색어 지우기" hidden>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7l10 10M17 7L7 17"/></svg>
+              </button>
+            </div>
+          </form>
+          <section class="recent" id="recent-products" aria-labelledby="recent-title" hidden>
+            <h3 class="recent__title" id="recent-title">최근 확인한 상품</h3>
+            <ul class="recent__list" id="recent-list"></ul>
+          </section>
+        </div>
+
+        <!-- 담보별 안내 전용 (개발 미리보기에서만): data/coverage-guides.json, 상품 정보와 연결하지 않음 -->
+        <div class="coverage-tools" id="coverage-tools" hidden>
+          <div class="demo-badge" role="note">
+            <strong class="demo-badge__label">검증 전</strong>
+            <span class="demo-badge__text">자료 검증 전 · 고객 설명 사용 금지. 최신 약관 및 승인 설명자료 확인이 필요합니다.</span>
+          </div>
+          <p class="product-tools__count" id="coverage-count" aria-live="polite"></p>
+          <form class="search search--compact" id="coverage-search-form" role="search">
+            <label class="visually-hidden" for="coverage-search-input">담보명 또는 설명 주제 검색</label>
+            <div class="search__field">
+              <svg class="search__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+              <input class="search__input" id="coverage-search-input" type="search" placeholder="담보명 또는 주제로 검색" autocomplete="off" enterkeyhint="search">
+              <button class="search__clear" id="coverage-search-clear" type="button" aria-label="검색어 지우기" hidden>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7l10 10M17 7L7 17"/></svg>
+              </button>
+            </div>
+          </form>
+          <ul class="coverage-list" id="coverage-list"></ul>
+          <p class="empty-message" id="coverage-empty" hidden>검색 결과가 없습니다</p>
+        </div>
+
+        <!-- 즐겨찾기 전용: 안내·개수·해제 되돌리기 -->
+        <div class="fav-tools" id="fav-tools" hidden>
+          <p class="fav-tools__desc">자주 확인하는 상품을 빠르게 찾아보세요.</p>
+          <p class="fav-tools__count" id="fav-count" aria-live="polite"></p>
+          <div class="fav-undo" id="fav-undo" role="status" hidden>
+            <span class="fav-undo__text" id="fav-undo-text"></span>
+            <button class="fav-undo__button" id="fav-undo-button" type="button">되돌리기</button>
+          </div>
+        </div>
+
+        <!-- 상품별 안내 그룹 보기 (개발 미리보기에서만): data/product-groups.json -->
+        <section class="group-area" id="group-area" aria-labelledby="group-area-title" hidden>
+          <h3 class="group-area__title" id="group-area-title">보험 유형별</h3>
+          <ul class="item-list" id="group-list"></ul>
+          <h3 class="group-area__title" id="standalone-title">개별 상품</h3>
+        </section>
+
+        <ul class="item-list" id="list-items"></ul>
+        <p class="empty-message" id="list-empty" hidden></p>
+
+        <section class="group-area" id="topic-hit-area" aria-labelledby="topic-hit-title" hidden>
+          <h3 class="group-area__title" id="topic-hit-title">설명 항목</h3>
+          <ul class="topic-list" id="topic-hit-list"></ul>
+        </section>
+        <section class="group-area" id="unassigned-area" aria-labelledby="unassigned-title" hidden>
+          <h3 class="group-area__title" id="unassigned-title">상품 미확인 자료</h3>
+          <ul class="item-list" id="unassigned-list"></ul>
+        </section>
+
+        <!-- 즐겨찾기 빈 화면 -->
+        <div class="fav-empty" id="fav-empty" hidden>
+          <span class="fav-empty__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.3 5.9.9-4.25 4.1 1 5.8L12 16.9l-5.25 2.7 1-5.8L3.5 9.7l5.9-.9z"/></svg>
+          </span>
+          <p class="fav-empty__title">아직 즐겨찾기한 상품이 없습니다.</p>
+          <p class="fav-empty__desc">자주 확인하는 상품에 별표를 눌러 등록해 보세요.</p>
+          <a class="fav-empty__link" href="#/products">상품별 안내로 이동</a>
+        </div>
+      </section>
+
+      <!-- 상품 상세 화면 (고객 설명 체크리스트 전용) -->
+      <section class="view" id="view-detail" aria-labelledby="detail-title" hidden>
+        <nav class="detail-breadcrumb" aria-label="현재 위치">
+          <a class="back-button" id="detail-back" href="#/products" aria-label="이전 화면으로 돌아가기">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>
+          </a>
+          <a class="detail-breadcrumb__link" href="#/products">상품별 안내</a>
+        </nav>
+
+        <div class="detail-head">
+          <h2 class="detail-head__title" id="detail-title" tabindex="-1"></h2>
+          <button class="fav-button detail-head__fav" id="detail-fav" type="button">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5l2.6 5.3 5.9.9-4.25 4.1 1 5.8L12 16.9l-5.25 2.7 1-5.8L3.5 9.7l5.9-.9z"/></svg>
+          </button>
+        </div>
+        <a class="group-link" id="detail-group-link" href="#/products" hidden></a>
+
+        <section class="detail-card" aria-labelledby="detail-checklist-title">
+          <h3 class="detail-card__title" id="detail-checklist-title">고객 설명 체크리스트</h3>
+          <div class="demo-badge" id="detail-demo-badge" role="note" hidden>
+            <strong class="demo-badge__label" id="detail-demo-label">DEMO</strong>
+            <span class="demo-badge__text" id="detail-demo-text">개발용 예시 · 고객 설명 사용 금지. 공식 승인자료가 아니며 실제 내용은 약관 확인이 필요합니다.</span>
+          </div>
+          <!-- 승인된 고객 설명자료가 연결되면 항목을 표시 -->
+          <ul class="checklist" id="detail-checklist" hidden></ul>
+          <p class="detail-card__empty" id="detail-checklist-empty">승인된 고객 설명자료를 준비 중입니다.</p>
+        </section>
+
+        <!-- 체크리스트 이미지 저장 (상세 화면 하단 · 승인 자료 또는 개발 미리보기에서 체크리스트가 있는 상품 활성화) -->
+        <div class="save-image">
+          <button class="save-image__button" id="detail-save-image" type="button" disabled aria-describedby="detail-save-hint">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11"/><path d="M7 10l5 5 5-5"/><path d="M5 20h14"/></svg>
+            <span id="detail-save-label">이미지로 저장</span>
+          </button>
+          <p class="save-image__hint" id="detail-save-hint">체크리스트가 등록되면 이미지로 저장할 수 있습니다.</p>
+          <p class="save-image__status" id="detail-save-status" role="status" aria-live="polite"></p>
+        </div>
+        <!-- 공유 창에서 저장을 마치면 잠깐 표시 (2026-10-30 사용자 요청) -->
+        <div class="save-toast" id="save-toast" role="status" aria-live="assertive" hidden>저장되었습니다.</div>
+        <!-- 약관 확인 안내는 하단 푸터 문구와 중복되어 표시하지 않음 (2026-10-30 사용자 요청) -->
+      </section>
+
+      <!-- 담보별 안내 주제 상세 (개발 미리보기 전용, 검증 전 자료) -->
+      <section class="view" id="view-topic" aria-labelledby="topic-title" hidden>
+        <nav class="detail-breadcrumb" aria-label="현재 위치">
+          <a class="back-button" id="topic-back" href="#/coverages" aria-label="이전 화면으로 돌아가기">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>
+          </a>
+          <a class="detail-breadcrumb__link" href="#/coverages">담보별 안내</a>
+        </nav>
+        <div class="detail-head">
+          <h2 class="detail-head__title" id="topic-title" tabindex="-1"></h2>
+        </div>
+        <!-- 담보별 안내는 상품과 연결하지 않음: 담보명 → 핵심 설명 → 추가 설명(펼치기) → 꼭 확인할 사항 (내용 없는 영역은 숨김) -->
+        <p class="topic-status" role="note" id="topic-status">검증 전 · 고객 설명 사용 금지</p>
+        <section class="topic-section" aria-labelledby="topic-summary-title">
+          <h3 class="topic-section__title" id="topic-summary-title">핵심 설명</h3>
+          <p class="topic-summary" id="topic-summary"></p>
+        </section>
+        <div class="topic-section topic-more" id="topic-detail-section" hidden>
+          <button class="topic-more__toggle" id="topic-more-toggle" type="button" aria-expanded="false" aria-controls="topic-detail-body">
+            <span id="topic-more-label">추가 설명 펼치기</span>
+            <svg class="checklist-item__chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+          </button>
+          <div class="topic-more__body" id="topic-detail-body" hidden>
+            <p class="topic-section__text" id="topic-detail-text"></p>
+          </div>
+        </div>
+        <!-- 학습용 설명 (data/coverage-learning-guides.json, 검토 초안 · 등록된 주제만): 상세 설명 → 그림(해당하는 경우) → 하단 공통 안내 -->
+        <div class="learn" id="topic-learn" hidden>
+          <p class="learn__status" id="topic-learn-status"></p>
+          <section class="learn-card" aria-labelledby="topic-learn-detail-title">
+            <h3 class="learn-card__title" id="topic-learn-detail-title">상세 설명</h3>
+            <div class="learn-card__body" id="topic-learn-detail"></div>
+          </section>
+          <section class="learn-card" id="topic-learn-visual-card" aria-labelledby="topic-learn-visual-title" hidden>
+            <h3 class="learn-card__title" id="topic-learn-visual-title">이해를 위한 예시</h3>
+            <div class="learn-visual" id="topic-learn-visual"></div>
+          </section>
+        </div>
+        <section class="topic-section" id="topic-check-section" aria-labelledby="topic-check-title" hidden>
+          <h3 class="topic-section__title" id="topic-check-title">꼭 확인할 사항</h3>
+          <ul class="topic-check-list" id="topic-check-list"></ul>
+        </section>
+        <p class="detail-notice">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5"/><path d="M12 8h.01"/></svg>
+          <span>실제 보장내용 및 지급 조건은 해당 상품의 약관과 공식 안내자료를 확인하세요.</span>
+        </p>
+      </section>
+
+      <!-- 상품별 안내 그룹 화면 (개발 미리보기 전용): 포함 상품(접기) → 공통 설명 항목 → 상품별 추가 확인사항 -->
+      <section class="view" id="view-group" aria-labelledby="group-title" hidden>
+        <nav class="detail-breadcrumb" aria-label="현재 위치">
+          <a class="back-button" id="group-back" href="#/products" aria-label="이전 화면으로 돌아가기">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>
+          </a>
+          <a class="detail-breadcrumb__link" href="#/products">상품별 안내</a>
+        </nav>
+        <div class="detail-head">
+          <h2 class="detail-head__title" id="group-title" tabindex="-1"></h2>
+        </div>
+        <p class="topic-status" role="note">검증 전 · 고객 설명 사용 금지</p>
+        <div class="group-products" id="group-products">
+          <button class="coverage-category__head group-products__toggle" id="group-products-toggle" type="button" aria-expanded="false" aria-controls="group-products-list">
+            <span class="coverage-category__name" id="group-products-label"></span>
+            <svg class="item__chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+          </button>
+          <ul class="item-list group-products__list" id="group-products-list" hidden></ul>
+        </div>
+        <section class="topic-section" id="group-common-section" aria-labelledby="group-common-title" hidden>
+          <h3 class="topic-section__title" id="group-common-title">공통 설명 항목</h3>
+          <p class="group-note" id="group-common-note"></p>
+          <ul class="topic-list" id="group-common-list"></ul>
+        </section>
+        <section class="topic-section" id="group-extra-section" aria-labelledby="group-extra-title" hidden>
+          <h3 class="topic-section__title" id="group-extra-title">상품별 추가 확인사항</h3>
+          <div class="group-extra" id="group-extra-list"></div>
+        </section>
+        <p class="group-note" id="group-empty" hidden>연결된 설명 주제가 없습니다. 공식 설명자료 확인 후 업데이트 예정</p>
+        <p class="detail-notice">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5"/><path d="M12 8h.01"/></svg>
+          <span>같은 그룹이라도 상품별 보장내용·지급 조건은 다를 수 있으니 해당 상품의 약관과 공식 안내자료를 확인하세요.</span>
+        </p>
+      </section>
+
+      <!-- 상품별 안내 설명 항목 화면 (개발 미리보기 전용): 제목 → 핵심 설명 → 상세 설명 → 꼭 확인할 사항 → 적용 범위 -->
+      <section class="view" id="view-guide-item" aria-labelledby="guide-item-title" hidden>
+        <nav class="detail-breadcrumb" aria-label="현재 위치">
+          <a class="back-button" id="guide-item-back" href="#/products" aria-label="이전 화면으로 돌아가기">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>
+          </a>
+          <a class="detail-breadcrumb__link" id="guide-item-crumb" href="#/products"></a>
+        </nav>
+        <div class="detail-head">
+          <h2 class="detail-head__title" id="guide-item-title" tabindex="-1"></h2>
+        </div>
+        <p class="topic-status" role="note" id="guide-item-status"></p>
+        <section class="topic-section" aria-labelledby="guide-item-summary-title">
+          <h3 class="topic-section__title" id="guide-item-summary-title">핵심 설명</h3>
+          <p class="topic-summary" id="guide-item-summary"></p>
+        </section>
+        <section class="topic-section" id="guide-item-detail-section" aria-labelledby="guide-item-detail-title" hidden>
+          <h3 class="topic-section__title" id="guide-item-detail-title">상세 설명</h3>
+          <p class="topic-section__text" id="guide-item-detail"></p>
+        </section>
+        <section class="topic-section" id="guide-item-check-section" aria-labelledby="guide-item-check-title" hidden>
+          <h3 class="topic-section__title" id="guide-item-check-title">꼭 확인할 사항</h3>
+          <ul class="topic-check-list" id="guide-item-check-list"></ul>
+        </section>
+        <section class="topic-section" aria-labelledby="guide-item-scope-title">
+          <h3 class="topic-section__title" id="guide-item-scope-title">적용 범위</h3>
+          <ul class="guide-scope" id="guide-item-scope"></ul>
+        </section>
+        <p class="detail-notice">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5"/><path d="M12 8h.01"/></svg>
+          <span>실제 보장내용 및 지급 조건은 해당 상품의 약관과 공식 안내자료를 확인하세요.</span>
+        </p>
+      </section>
+
+      <!-- 존재하지 않는 상품 주소 또는 데이터 로딩 실패 안내 -->
+      <section class="view" id="view-notfound" aria-labelledby="notfound-title" hidden>
+        <div class="fav-empty">
+          <p class="fav-empty__title" id="notfound-title" tabindex="-1"></p>
+          <p class="fav-empty__desc" id="notfound-desc"></p>
+          <a class="fav-empty__link" href="#/products">상품별 안내로 이동</a>
+        </div>
+      </section>
+    </main>
+
+      <!-- 하단 배경 웨이브 장식 -->
+      <svg class="bg-wave" viewBox="0 0 1440 160" preserveAspectRatio="none" aria-hidden="true">
+        <path class="bg-wave__navy" d="M0 96C240 40 480 40 720 80s480 72 720 16v64H0z"/>
+        <path class="bg-wave__orange" d="M0 128c260-48 520-40 760-8s460 40 680-8v48H0z"/>
+      </svg>
+    </div>
+
+    <!-- 보험 관련 주의 안내 (푸터와 별도 영역) -->
+    <aside class="app-notice" aria-label="이용 안내">
+      <div class="container app-notice__inner">
+        <svg class="app-notice__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5"/><path d="M12 8h.01"/></svg>
+        <p class="app-notice__text">본 서비스는 상품설명 업무지원용입니다. 실제 보장내용은 해당 상품의 약관 및 공식 안내자료를 확인하시기 바랍니다.</p>
+      </div>
+    </aside>
+
+    <footer class="app-footer">
+      <div class="container app-footer__inner">
+        <p class="app-footer__credit"><span class="app-footer__nowrap">PLANNED &amp; CREATED BY</span> <span aria-hidden="true">·</span> <span class="app-footer__nowrap">강서영업파트 김나은</span></p>
+        <p class="app-footer__ai">Developed with AI assistance</p>
+        <p class="app-footer__copy">© 2026 WANPAN NOTE</p>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

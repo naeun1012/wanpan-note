@@ -2687,15 +2687,26 @@ function layoutDraftChecklistImage(ctx, data, draw) {
   return { width, height: Math.ceil(y) };
 }
 
-// 휴대폰 화면 크기(1080×2340)에 맞춰 배율을 정하고 그 높이로 저장 (최소 배율에서도 넘치면 그만큼 길게 저장)
+// 휴대폰 화면 크기(1080×2340)에 맞춰 배율을 정함: 길면 줄이고(최소 0.78), 짧으면 글자를 키워(최대 1.5) 화면을 채움
+// 2026-10-30 사용자 요청: 하단 빈 공간 없이 저장 → 저장 높이는 내용 높이 그대로 (하단 안내를 내용 바로 아래에 배치)
+const PHONE_IMAGE_MAX_SCALE = 1.5;
+
 function fitDraftImageToPhone(ctx, data) {
+  const heightAt = (scale) => layoutDraftChecklistImage(ctx, { ...data, scale }, false).height;
   let scale = 1;
-  let natural = layoutDraftChecklistImage(ctx, { ...data, scale }, false).height;
+  let natural = heightAt(scale);
   while (natural > PHONE_IMAGE_HEIGHT && scale > PHONE_IMAGE_MIN_SCALE) {
     scale = Math.max(PHONE_IMAGE_MIN_SCALE, Math.round((scale - 0.02) * 100) / 100);
-    natural = layoutDraftChecklistImage(ctx, { ...data, scale }, false).height;
+    natural = heightAt(scale);
   }
-  return { scale, pageHeight: Math.max(PHONE_IMAGE_HEIGHT, natural) };
+  while (natural <= PHONE_IMAGE_HEIGHT && scale < PHONE_IMAGE_MAX_SCALE) {
+    const next = Math.min(PHONE_IMAGE_MAX_SCALE, Math.round((scale + 0.02) * 100) / 100);
+    const nextHeight = heightAt(next);
+    if (nextHeight > PHONE_IMAGE_HEIGHT) break;
+    scale = next;
+    natural = nextHeight;
+  }
+  return { scale, pageHeight: 0 };
 }
 
 function layoutPhoneDraftChecklistImage(ctx, data, draw) {

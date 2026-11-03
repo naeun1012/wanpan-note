@@ -1080,10 +1080,28 @@ function getRecentProducts() {
     .filter(Boolean);
 }
 
-/* ===== 정렬: 즐겨찾기 우선 + 가나다순 ===== */
+/* ===== 정렬: 즐겨찾기 우선 + 지정 순서 + 가나다순 ===== */
+// 2026-11-04 사용자 지정 순서 (상품 ID 기준): 퍼펙트플러스 → 간편 상품(내맘엔·내삶엔·간편한3.10.10) → 굿앤굿스타·굿앤굿어린이·굿앤굿1540
+// 목록에 없는 상품은 이 순서 뒤에 가나다순으로 표시
+const PRODUCT_DISPLAY_ORDER = [
+  'product-001', // 퍼펙트플러스종합보험
+  'product-002', // 내맘엔(N)맞춤간편건강보험
+  'product-006', // 내삶엔(3N)맞춤간편건강보험
+  'product-008', // 간편한3.10.10건강보험
+  'product-009', // 굿앤굿스타종합보험
+  'product-007', // 굿앤굿어린이종합보험
+  'product-004', // 굿앤굿1540종합보험
+];
+
+function displayRank(item) {
+  const index = PRODUCT_DISPLAY_ORDER.indexOf(item.id);
+  return index === -1 ? PRODUCT_DISPLAY_ORDER.length : index;
+}
+
 function sortProducts(items) {
   return [...items].sort((a, b) => (
     Number(favorites.has(b.id)) - Number(favorites.has(a.id))
+    || displayRank(a) - displayRank(b)
     || a.name.localeCompare(b.name, 'ko')
   ));
 }

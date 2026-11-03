@@ -1644,7 +1644,7 @@ button.checklist-item__head {
 
 .viz-timeline__step {
   display: flex;
-  flex: 0 0 auto;
+  flex: 0 1 auto;
   flex-direction: column;
   gap: 6px;
   min-width: 0;
@@ -1661,9 +1661,16 @@ button.checklist-item__head {
   line-height: 1.35;
   color: var(--color-text);
   word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+
+/* 이웃한 구간 글자가 붙지 않도록 오른쪽 여백 (마지막 구간 제외) */
+.viz-timeline__step:not(:last-child) .viz-timeline__label {
+  padding-right: 8px;
 }
 
 .viz-timeline__step--neutral {
+  flex: 0 0 52px;
   width: 52px;
 }
 

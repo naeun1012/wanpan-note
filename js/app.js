@@ -801,7 +801,8 @@ function createTimelineVisual(visual) {
     const item = document.createElement('div');
     item.className = `viz-timeline__step viz-timeline__step--${toneClass(step.tone)}`;
     const weight = Number(step.weight) || 0;
-    if (weight > 0) item.style.flexGrow = String(weight);
+    // 너비는 비율(weight)로만 나눔: 글자 길이 때문에 그림이 화면 밖으로 넘치지 않도록 기본 크기 0
+    if (weight > 0) item.style.flex = `${weight} 1 0`;
     item.append(createTextElement('span', 'viz-timeline__bar', ''));
     item.append(createTextElement('span', 'viz-timeline__label', step.label));
     track.append(item);

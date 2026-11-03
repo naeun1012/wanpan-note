@@ -3018,11 +3018,14 @@ function render() {
 // 상세 화면의 뒤로가기: 앱 안에서 이동해 왔다면 이전 화면(검색 결과·목록 등)으로 복귀
 let hasInAppHistory = false;
 
-detailBack.addEventListener('click', (event) => {
-  if (hasInAppHistory) {
-    event.preventDefault();
-    history.back();
-  }
+// 상단·하단 뒤로가기 버튼 모두 같은 동작
+[detailBack, document.getElementById('detail-back-bottom')].forEach((button) => {
+  button.addEventListener('click', (event) => {
+    if (hasInAppHistory) {
+      event.preventDefault();
+      history.back();
+    }
+  });
 });
 
 /* ===== 초기화 ===== */

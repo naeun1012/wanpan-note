@@ -283,6 +283,13 @@
         </div>
         <!-- 공유 창에서 저장을 마치면 잠깐 표시 (2026-10-30 사용자 요청) -->
         <div class="save-toast" id="save-toast" role="status" aria-live="assertive" hidden>저장되었습니다.</div>
+        <!-- 체크리스트를 다 본 뒤 맨 아래에서 바로 돌아갈 수 있도록 상단과 같은 뒤로가기 (2026-11-04 사용자 요청) -->
+        <nav class="detail-breadcrumb detail-breadcrumb--bottom" aria-label="이전 화면으로 돌아가기">
+          <a class="back-button" id="detail-back-bottom" href="#/products" aria-label="이전 화면으로 돌아가기">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>
+          </a>
+          <a class="detail-breadcrumb__link" href="#/products">상품별 안내</a>
+        </nav>
         <!-- 약관 확인 안내는 하단 푸터 문구와 중복되어 표시하지 않음 (2026-10-30 사용자 요청) -->
       </section>
 

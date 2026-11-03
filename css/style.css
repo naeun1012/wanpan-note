@@ -1195,6 +1195,11 @@ svg {
   margin: 0 0 4px;
 }
 
+/* 상세 화면 맨 아래 뒤로가기 (상단과 같은 모양) */
+.detail-breadcrumb--bottom {
+  margin: 24px 0 0;
+}
+
 .detail-breadcrumb__link {
   display: flex;
   align-items: center;
